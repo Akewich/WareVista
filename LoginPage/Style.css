@@ -1,0 +1,14 @@
+html,
+body {
+  height: 100%;
+}
+
+.form-logo {
+    margin: center;
+}
+
+.form-signin {
+  max-width: 330px;
+  padding: 1rem;
+}
+
