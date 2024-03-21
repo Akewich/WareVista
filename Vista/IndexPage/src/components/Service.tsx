@@ -19,9 +19,9 @@ function Service() {
           </div>
 
           <div className="row">
-            <div className="col-12 col-md-12 col-lg-4">
+            <div className="col-12 col-md-10 col-lg-4">
               <div className="img-service text-center pb-2">
-                <div className="design">
+                <div className="design mx-5">
                   <Image
                     src={service1}
                     className="service1"
@@ -40,7 +40,7 @@ function Service() {
             </div>
             <div className="col-12 col-md-12 col-lg-4">
               <div className="img-service text-center pb-2">
-                <div className="analyst">
+                <div className="analyst mx-5">
                   <Image
                     src={service2}
                     className="service2"
@@ -59,7 +59,7 @@ function Service() {
             </div>
             <div className="col-12 col-md-12 col-lg-4">
               <div className="img-service text-center pb-2">
-                <div className="management">
+                <div className="management mx-5">
                   <Image
                     src={service3}
                     className="service3"
