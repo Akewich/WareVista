@@ -1,0 +1,12 @@
+
+.formSignIn{
+    max-width: 340px;
+    padding: 1rem;
+}
+.formLogo{
+    text-align: center;
+    margin-top: 150px;
+}
+.formForgot{
+    display: flex;
+}
