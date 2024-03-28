@@ -1,13 +1,15 @@
 import React from "react";
-import ImageLogo from "../components/imageLogo";
+import ImageLogo from "../../components/imageLogo";
 import "./Home.css";
 import { Button } from "@mui/material";
 import LoginIcon from "@mui/icons-material/Login";
 import NextWeekOutlinedIcon from "@mui/icons-material/NextWeekOutlined";
+import Header from "../HeaderComponets/Header";
 
 const Home = () => {
   return (
     <>
+      <Header />
       <section id="about" className="about">
         <div className="container">
           <div className="row">

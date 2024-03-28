@@ -1,7 +1,7 @@
 #build{
     height: 1024px;
     position: relative;
-    background-image: url(../Images/kid.png);
+    background-image: url(../../Images/kid.png);
     background-size: cover;
     background-repeat: no-repeat;
 }

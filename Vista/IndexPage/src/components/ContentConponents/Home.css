@@ -35,7 +35,7 @@
 
 #about{
     position: relative;
-    background-image: url(../Images/City-bg.png);
+    background-image: url(../../Images/City-bg.png);
     background-size: cover;
     background-repeat: no-repeat;
 }

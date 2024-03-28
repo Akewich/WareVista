@@ -1,25 +1,24 @@
 import React from "react";
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import Image from "react-bootstrap/Image";
-import "./Header.css";
+import { Nav, Container, Navbar, Image } from "react-bootstrap";
 import imageLogo from "../../Images/WareHouseLOGO.png";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
-
-const Header = () => {
+const NavbarHeader = () => {
   return (
     <>
-      <Navbar expand="md" className="navbar1 pt-5 ">
+      <Navbar
+        expand="lg"
+        className="navbar bg-dark border-bottom border-body"
+        data-bs-theme="dark"
+      >
         <Container>
-          <Navbar.Brand href="#">
+          <Navbar.Brand as={Link} to={"/#"}>
             <Image src={imageLogo} width={100} height={100} alt="" fluid />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="navobj ms-auto  " style={{ fontSize: "24px" }}>
-              <Nav.Link as={Link} to={"/"} style={{ color: "white" }}>
+            <Nav className="navobj ms-auto" style={{ fontSize: "24px" }}>
+              <Nav.Link as={Link} to={"/#"} style={{ color: "white" }}>
                 Home
               </Nav.Link>
               <Nav.Link as={Link} to={"/about"} style={{ color: "white" }}>
@@ -36,7 +35,7 @@ const Header = () => {
               </Nav.Link>
             </Nav>
             <Button
-              className="signIn ms-4 fs-5"
+              className="signIn fs-5"
               style={{ color: "black" }}
               color="warning"
               variant="contained"
@@ -56,4 +55,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default NavbarHeader;

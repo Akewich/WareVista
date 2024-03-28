@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import NavbarHeader from "./NavHead";
 
 const Document = () => {
   return (
-    <div>Document</div>
-  )
-}
+    <div>
+      <NavbarHeader />
+      <h1>This is Document Page</h1>
+    </div>
+  );
+};
 
-export default Document
+export default Document;

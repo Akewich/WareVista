@@ -1,10 +1,9 @@
 import React from "react";
-import detail from "../Images/City1.png";
+import detail from "../../Images/City1.png";
 import { Image } from "react-bootstrap";
 import "./Detail.css";
 import NextWeekOutlinedIcon from "@mui/icons-material/NextWeekOutlined";
 import { Button } from "@mui/material";
-import theme from "./theme";
 import { BorderColor, Widgets } from "@mui/icons-material";
 
 function Detail() {

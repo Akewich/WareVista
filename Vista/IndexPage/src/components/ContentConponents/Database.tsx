@@ -1,5 +1,5 @@
 import React from "react";
-import database from "../Images/database.png";
+import database from "../../Images/database.png";
 import { Image } from "react-bootstrap";
 import { Button } from "@mui/material";
 import "./Database.css";

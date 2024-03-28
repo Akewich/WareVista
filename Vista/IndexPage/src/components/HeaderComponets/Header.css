@@ -1,10 +1,12 @@
-.navbar {
+.navbar1 {
     width: 100vw;
     height: 100px;
-    object-fit: cover;
     filter: brightness(1);
-    position: absolute;
+    position:absolute;
     top: 0;
     left: 0;
     z-index: 10;
+}
+nav a:hover{
+    text-decoration: underline ;
 }

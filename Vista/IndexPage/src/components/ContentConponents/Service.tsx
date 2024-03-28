@@ -1,8 +1,8 @@
 import React from "react";
 import { Image } from "react-bootstrap";
-import service1 from "../Images/service1.png";
-import service2 from "../Images/service2.png";
-import service3 from "../Images/service3.png";
+import service1 from "../../Images/service1.png";
+import service2 from "../../Images/service2.png";
+import service3 from "../../Images/service3.png";
 import "./Service.css";
 
 function Service() {
@@ -19,7 +19,7 @@ function Service() {
           </div>
 
           <div className="row">
-            <div className="col-12 col-md-10 col-lg-4">
+            <div className="col-12 col-md-12 col-lg-4">
               <div className="img-service text-center pb-2">
                 <div className="design mx-5">
                   <Image
