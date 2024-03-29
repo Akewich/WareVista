@@ -20,7 +20,7 @@ const RegisterPage = () => {
                 width="200"
                 height="200"
               />
-              <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
+              <h1 className="h3 mb-3 fw-normal">Please register</h1>
             </div>
 
             <div className="form-floating my-2">
