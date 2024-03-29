@@ -1,0 +1,31 @@
+.service{
+    background-color: black;
+    color: azure;
+    padding-bottom: 50px;
+}
+.section-header h3{
+    color: azure;
+}
+.img-service {
+    color: azure;
+}
+.detail-text{
+    margin-top: 70px;
+    margin-left: 50px;
+    justify-content: center;
+    align-items: center;
+}
+.detail-text h2{
+    font-size: 60px;
+}
+.detail-text p{
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.service {
+  font-family: "Oxanium", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
