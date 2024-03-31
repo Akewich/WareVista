@@ -33,4 +33,4 @@ RUN npm install typescript
 EXPOSE 8000
 
 # กำหนด command สำหรับเริ่มต้น run application (ตอน run container)
-CMD ["npm", "run" "preview"]
+CMD ["npm", "run", "preview"]
