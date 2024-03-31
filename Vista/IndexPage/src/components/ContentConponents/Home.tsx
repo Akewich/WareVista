@@ -1,4 +1,3 @@
-import React from "react";
 import ImageLogo from "../../components/imageLogo";
 import "./Home.css";
 import { Button } from "@mui/material";
