@@ -14,23 +14,26 @@ RUN npm install
 # ทำการ copy file package.json จากเครื่อง local เข้ามาใน container
 COPY . .
 
-# build Project
+# # build Project
 RUN npm run build
 
-# begin second stage
+# # begin second stage
 FROM node:18-alpine as PRODUCTION_IMGAE
 
-COPY --from=BUILD_IMAGE /usr/src/App.tsx/dist/ /usr/src/dist/
+WORKDIR /usr/src/App.tsx
 
-# ทำการปล่อย port 8000 ออกมาให้ access ได้
-EXPOSE 8000
+# copy file 
+COPY --from=BUILD_IMAGE /usr/src/App.tsx/dist/ /usr/src/App.tsx/dist/
+
+# # ทำการปล่อย port 8080 ออกมาให้ access ได้
+EXPOSE 8080
 
 COPY package.json ./
 COPY vite.config.ts ./
 
-# install ts
+# # install type script for base
 RUN npm install typescript
-EXPOSE 8000
 
+EXPOSE 8080
 # กำหนด command สำหรับเริ่มต้น run application (ตอน run container)
 CMD ["npm", "run", "preview"]
