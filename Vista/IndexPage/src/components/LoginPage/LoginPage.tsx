@@ -1,15 +1,15 @@
-import React from "react";
 import { Form, Image } from "react-bootstrap";
 import imageLogo from "../../Images/WareHouseLOGO.png";
-import { Button } from "@mui/material";
+import { Button } from "react-bootstrap";
 import "./LoginPage.css";
 import { Link } from "react-router-dom";
+import imageIcon from "../../Images/googleIcon.png";
 function LoginPage() {
   return (
     <>
-      <div className="logIn container w-100 m-auto">
+      <div className="logIn">
         {/* Email */}
-        <main className="formSignIn w-100 m-auto">
+        <main className="formSignIn container">
           <Form>
             <div className="formLogo">
               <Image
@@ -19,61 +19,89 @@ function LoginPage() {
                 width="200"
                 height="200"
               />
-              <h1 className="h3 mb-3 fw-normal">Please sign in</h1>
             </div>
+            <div className="inputForm">
+              <div className="form-floating ">
+                <input
+                  type="email"
+                  className="form-field "
+                  id="floatingInput"
+                  placeholder="    name@example.com"
+                  style={{ borderRadius: 15 }}
+                />
+              </div>
 
-            <div className="form-floating my-3">
-              <input
-                type="email"
-                className="form-control"
-                id="floatingInput"
-                placeholder="name@example.com"
-              />
-              <label htmlFor="floatingInput">Email address</label>
-            </div>
-
-            <div className="form-floating my-3">
-              <input
-                type="password"
-                className="form-control"
-                id="floatingPassword"
-                placeholder="Password"
-              />
-              <label htmlFor="floatingPassword">Password</label>
-            </div>
-
-            <div className="form-check text-start my-3 text">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                value="remember-me"
-                id="flexCheckDefault"
-              />
-              <label className="form-check-label" htmlFor="flexCheckDefault">
-                Remember me
-              </label>
-
-              <div className="formForgot ms-5 d-inline">
-                <a href="">Forgot Password?</a>
+              <div className="form-floating ">
+                <input
+                  type="password"
+                  className="form-field"
+                  id="floatingPassword"
+                  placeholder="   Password"
+                  style={{ borderRadius: 15 }}
+                />
               </div>
             </div>
-            <Link
-              to={"/design"}
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <Button
-                variant="contained"
-                className="btn w-100 py-2"
-                type="submit"
-              >
-                Sign in
-              </Button>
-            </Link>
-            <p className="mt-3 mb-3 text-body-secondary">
-              <Link to={"/register"}>Creat new accout</Link>
-            </p>
+            <div className="two-col my-3 ">
+              <div className="checkOne">
+                <input
+                  className="form-check-input d-inline"
+                  type="checkbox"
+                  value="remember-me"
+                  id="flexCheckDefault"
+                />
+                Remember me
+                <Link
+                  className="ps-3"
+                  style={{ textDecorationLine: "none" }}
+                  to={"/register"}
+                >
+                  Forgot Password?
+                </Link>{" "}
+              </div>
+            </div>
           </Form>
         </main>
+        <div className="btnSign">
+          <Link
+            to={"/design"}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <Button
+              variant="contained"
+              style={{ borderRadius: "10px" }}
+              className="btnSignIn"
+              type="submit"
+            >
+              Sign in
+            </Button>
+          </Link>
+        </div>
+        <div className="register text-center">
+          <p>
+            Don't have an account ?{" "}
+            <Link
+              className="ps-3"
+              style={{ textDecorationLine: "none" }}
+              to={"/register"}
+            >
+              Click me
+            </Link>{" "}
+          </p>
+        </div>
+        <div className="or mt-3 text-center">
+          <h5>- OR -</h5>
+        </div>
+        <div className="icon">
+          <Button
+            variant="contained"
+            className="iconSignIn"
+            style={{ borderRadius: "10px" }}
+            type="submit"
+          >
+            <Image src={imageIcon} className="pe-2" />
+            Sign in with Google
+          </Button>
+        </div>
       </div>
     </>
   );

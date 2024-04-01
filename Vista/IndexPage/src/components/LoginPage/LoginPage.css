@@ -1,12 +1,69 @@
-
 .formSignIn{
     max-width: 340px;
     padding: 1rem;
 }
 .formLogo{
+    text-align: end;
+    margin-top: 100px;
+    margin-bottom: 60px;
+}
+.formCheck{
     text-align: center;
-    margin-top: 150px;
+    margin-right: 50px;
 }
 .formForgot{
-    display: flex;
+    margin-left: 11px;
+}
+.form-check-input{
+    margin-right: 10px ;
+}
+.form-floating{
+    align-items: center;
+    margin-top: 30px;
+}
+
+.form-field{
+    background-color: #DDE2E7;
+    border-color: #DDE2E7;
+    border-top:#DDE2E7;
+    border-left:#DDE2E7;
+    width: 400px;
+    height: 40px;
+}
+.btnSign{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-left: 100px;
+}
+.btnSignIn {
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+    margin-left: 100x;
+    width: 245px;
+    background-color: #FF873A;
+}
+.or{ 
+    margin-left: 100px;
+    color: #9A9EA3
+}
+.icon{
+    align-items: center;
+    text-align: center;
+}
+.iconSignIn{
+    text-align:center;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ebf3f7;
+    margin-top: 20px;
+    margin-left: 100px;
+}
+.register{
+    margin-top: 50px;
+    margin-left: 100px;
+    color: #9A9EA3
+
 }

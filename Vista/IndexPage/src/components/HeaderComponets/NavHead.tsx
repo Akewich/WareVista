@@ -1,4 +1,3 @@
-import React from "react";
 import { Nav, Container, Navbar, Image } from "react-bootstrap";
 import imageLogo from "../../Images/WareHouseLOGO.png";
 import { Button } from "@mui/material";
