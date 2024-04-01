@@ -9,6 +9,7 @@ import Home from "./components/ContentConponents/Home";
 import Service from "./components/ContentConponents/Service";
 import LoginPage from "./components/LoginPage/LoginPage";
 import SignUp from "./components/LoginPage/SignUp";
+<<<<<<< Updated upstream
 =======
 import React from "react";
 import Header from "./components/HeaderComponets/Header";
@@ -19,25 +20,14 @@ import Service from "./components/ContentComponents/Service";
 import Database from "./components/ContentComponents/Database";
 import Build from "./components/ContentComponents/Build";
 >>>>>>> Stashed changes
+=======
+import { useState } from "react";
+>>>>>>> Stashed changes
 
 function App() {
+  const [isLoading,setIsLoading] = useState(true) 
   return (
     <>
-      {/* //   <BrowserRouter>
-  //     <Routes>
-  //       <Route path="/Login" element={<LoginPage />}></Route>
-  //       <Route path="/SignUp" element={<SignUp />}></Route>
-  //       <Route path="/Header" element={<Header />}></Route>
-  //       <Route path="/Home" element={<Home />}></Route>
-  //       <Route path="/Service" element={<Service />}></Route>
-  //       <Route path="/Detail" element={<Detail />}></Route>
-  //       <Route path="/Database" element={<Database />}></Route>
-  //       <Route path="/Build" element={<Build />}></Route>
-  //       <Route path="/Footer" element={<Footer />}></Route>
-  //     </Routes>
-  //   </BrowserRouter> */}
-      {/* <LoginPage />
-      <SignUp /> */}
       <Home />
       <Service />
       <Detail />
