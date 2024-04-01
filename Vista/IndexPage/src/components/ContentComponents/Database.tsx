@@ -1,9 +1,4 @@
-import React from "react";
-<<<<<<<< Updated upstream:Vista/IndexPage/src/components/ContentConponents/Database.tsx
 import database from "../../Images/database.png";
-========
-import database from "../../Images/database.png"
->>>>>>>> Stashed changes:Vista/IndexPage/src/components/ContentComponents/Database.tsx
 import { Image } from "react-bootstrap";
 import { Button } from "@mui/material";
 import "./Database.css";

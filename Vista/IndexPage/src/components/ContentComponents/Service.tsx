@@ -1,4 +1,3 @@
-import React from "react";
 import { Image } from "react-bootstrap";
 import service1 from "../../Images/service1.png";
 import service2 from "../../Images/service2.png";

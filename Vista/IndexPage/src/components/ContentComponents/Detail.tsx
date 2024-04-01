@@ -1,13 +1,8 @@
-import React from "react";
 import detail from "../../Images/City1.png";
 import { Image } from "react-bootstrap";
 import "./Detail.css";
 import NextWeekOutlinedIcon from "@mui/icons-material/NextWeekOutlined";
 import { Button } from "@mui/material";
-<<<<<<<< Updated upstream:Vista/IndexPage/src/components/ContentConponents/Detail.tsx
-import { BorderColor, Widgets } from "@mui/icons-material";
-========
->>>>>>>> Stashed changes:Vista/IndexPage/src/components/ContentComponents/Detail.tsx
 
 function Detail() {
   return (
@@ -37,7 +32,7 @@ function Detail() {
                   variant="outlined"
                   sx={{
                     color: "black",
-                    borderColor : "black",
+                    borderColor: "black",
                     "&:hover": { borderColor: "black" },
                     borderRadius: "12px",
                   }}
