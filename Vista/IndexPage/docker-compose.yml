@@ -1,9 +1,22 @@
 version: '3'
 services:
-  web:
-    build: .
+  web: # name of container
+    build: . # address
     ports:
       - "8080:8080"
+    container_name: warevista
+    volumes:
+      - '/usr/src/app'
+      - '/usr/src/app/node_modules'
     command: npm run preview
-    depends_on:
-      - warevista
+  # vite:
+  #   build: .
+  #   entrypoint: ./docker-vite.sh
+  #   environment:
+  #     DEBUG: '*vite*'
+  #     RAILS_ENV: development
+  #     VITE_RUBY_HOST: 0.0.0.0
+  #   ports:
+  #     - "8080:8080"
+  #   volumes:
+  #     - .:/app
