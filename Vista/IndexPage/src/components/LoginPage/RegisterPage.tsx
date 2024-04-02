@@ -5,6 +5,7 @@ import imageLogo from "../../Images/WareHouseLOGO.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import "./RegisterPage.css";
+import NavbarHeader from "../HeaderComponets/NavHead";
 
 export default function RegisterPage() {
   const [inputs, setInputs] = useState({
@@ -43,6 +44,7 @@ export default function RegisterPage() {
 
   return (
     <>
+      <NavbarHeader />
       <div className="logIn container">
         {/* Email */}
         <main className="formSignIn w-100 m-auto">

@@ -4,9 +4,11 @@ import { Button } from "react-bootstrap";
 import "./LoginPage.css";
 import { Link } from "react-router-dom";
 import imageIcon from "../../Images/googleIcon.png";
+import NavbarHeader from "../HeaderComponets/NavHead";
 function LoginPage() {
   return (
     <>
+      <NavbarHeader />
       <div className="logIn">
         {/* Email */}
         <main className="formSignIn container">

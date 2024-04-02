@@ -23,7 +23,7 @@ const NavbarHeader = () => {
               <Nav.Link as={Link} to={"/about"} style={{ color: "white" }}>
                 About
               </Nav.Link>
-              <Nav.Link as={Link} to={"/design"} style={{ color: "white" }}>
+              <Nav.Link as={Link} to={"/dashboard"} style={{ color: "white" }}>
                 Design
               </Nav.Link>
               <Nav.Link as={Link} to={"/report"} style={{ color: "white" }}>
