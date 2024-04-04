@@ -1,0 +1,8 @@
+.navItem{
+    padding: 10px;
+}
+.navItem:hover{
+    border-radius: 5px;
+    background-color: #88ABD2;
+}
+

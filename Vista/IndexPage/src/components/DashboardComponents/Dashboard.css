@@ -1,3 +1,15 @@
-.LogoutIcon{
-    margin-right: 50px;
+.dashBoard{
+    background: #DCDFE7;
+    display: flex;
+    gap: 20px;
+
+}
+.dashBoardContent{
+    background: #fff;
+    flex: 1;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
 }
