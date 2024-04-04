@@ -5,6 +5,9 @@ import "./LoginPage.css";
 import { Link } from "react-router-dom";
 import imageIcon from "../../Images/googleIcon.png";
 import NavbarHeader from "../HeaderComponets/NavHead";
+import FormGroup from "@mui/material/FormGroup";
+import FormControlLabel from "@mui/material/FormControlLabel";
+import Checkbox from "@mui/material/Checkbox";
 function LoginPage() {
   return (
     <>
@@ -28,7 +31,7 @@ function LoginPage() {
                   type="email"
                   className="form-field "
                   id="floatingInput"
-                  placeholder="    name@example.com"
+                  placeholder="name@example.com"
                   style={{ borderRadius: 15 }}
                 />
               </div>
@@ -38,20 +41,14 @@ function LoginPage() {
                   type="password"
                   className="form-field"
                   id="floatingPassword"
-                  placeholder="   Password"
+                  placeholder="Password"
                   style={{ borderRadius: 15 }}
                 />
               </div>
             </div>
             <div className="two-col my-3 ">
               <div className="checkOne">
-                <input
-                  className="form-check-input d-inline"
-                  type="checkbox"
-                  value="remember-me"
-                  id="flexCheckDefault"
-                />
-                Remember me
+                <FormControlLabel control={<Checkbox />} label="Remember me" />
                 <Link
                   className="ps-3"
                   style={{ textDecorationLine: "none" }}
@@ -65,7 +62,7 @@ function LoginPage() {
         </main>
         <div className="btnSign">
           <Link
-            to={"/design"}
+            to={"/dashboard"}
             style={{ textDecoration: "none", color: "black" }}
           >
             <Button

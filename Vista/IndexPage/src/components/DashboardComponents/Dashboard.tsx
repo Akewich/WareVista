@@ -1,14 +1,16 @@
 import Sidebar from "./Sidebar";
-import "./Dashboard.css";
 import Homedash from "./Homedash";
 import Profile from "./Profile";
+import "./Dashboard.css";
 function Dashboard() {
   return (
-    <div className="dashBoard">
-      <Sidebar />
-      <div className="dashBoardContent">
-        <Homedash />
-        <Profile />
+    <div>
+      <div className="dashBoard">
+        <Sidebar />
+        <div className="dashBoardContent">
+          <Homedash />
+          <Profile />
+        </div>
       </div>
     </div>
   );

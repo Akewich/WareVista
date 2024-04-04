@@ -1,12 +1,12 @@
 import "./App.css";
-import Build from "./components/ContentConponents/Build";
-import Database from "./components/ContentConponents/Database";
-import Detail from "./components/ContentConponents/Detail";
-import Footer from "./components/ContentConponents/Footer";
-import Home from "./components/ContentConponents/Home";
-import Service from "./components/ContentConponents/Service";
+import Build from "./components/ContentComponents/Build";
+import Database from "./components/ContentComponents/Database";
+import Detail from "./components/ContentComponents/Detail";
+import Footer from "./components/ContentComponents/Footer";
+import Home from "./components/ContentComponents/Home";
+import Service from "./components/ContentComponents/Service";
 
-function App() {
+const App = () => {
   return (
     <>
       <Home />
@@ -17,6 +17,6 @@ function App() {
       <Footer />
     </>
   );
-}
+};
 
 export default App;

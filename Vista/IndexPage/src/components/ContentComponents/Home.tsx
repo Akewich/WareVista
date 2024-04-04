@@ -1,4 +1,4 @@
-import ImageLogo from "../../Images/WareHouseLOGO.png";
+import ImageLogo from "../../components/imageLogo";
 import "./Home.css";
 import { Button } from "@mui/material";
 import LoginIcon from "@mui/icons-material/Login";

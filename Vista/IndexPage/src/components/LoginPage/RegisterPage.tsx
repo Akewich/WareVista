@@ -66,7 +66,7 @@ export default function RegisterPage() {
                   type="text"
                   className="formField"
                   name="username"
-                  placeholder="  Username"
+                  placeholder="Username"
                   value={inputs.username || ""}
                   onChange={handleChange}
                 />
@@ -81,7 +81,7 @@ export default function RegisterPage() {
                 <input
                   type="email"
                   className="formField"
-                  placeholder="  name@example.com"
+                  placeholder="name@example.com"
                   name="email"
                   value={inputs.email}
                   onChange={handleChange}
@@ -97,7 +97,7 @@ export default function RegisterPage() {
                 <input
                   type="password"
                   className="formField"
-                  placeholder="  Password"
+                  placeholder="Password"
                   name="password"
                   value={inputs.password}
                   onChange={handleChange}
