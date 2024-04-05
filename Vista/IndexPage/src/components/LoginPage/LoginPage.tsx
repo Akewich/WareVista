@@ -5,7 +5,6 @@ import "./LoginPage.css";
 import { Link } from "react-router-dom";
 import imageIcon from "../../Images/googleIcon.png";
 import NavbarHeader from "../HeaderComponets/NavHead";
-import FormGroup from "@mui/material/FormGroup";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
 function LoginPage() {
