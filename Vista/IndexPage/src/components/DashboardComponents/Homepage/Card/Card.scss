@@ -1,0 +1,21 @@
+.blog{
+    margin-top: 50px ;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+.blog:hover{
+    transform: scale(1.1);
+    box-shadow: none !important;
+    transition: 0.2s ease-in-out;
+    cursor: pointer;
+}
+.propImg{
+    width: 240px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.cardText{
+    padding-top: 30px;
+}

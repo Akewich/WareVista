@@ -1,17 +1,37 @@
 @import "../../Responsive.scss";
 .secondBigChart{
     width: 100%;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     h3{
-      font-size: 25px;
       @include xxl{
+        font-size: 25px;
     }
   }
   .secondChartBox{
-      width: 660px;
-      height: 400px;
-    }
+    width: 660px;
+    height: 400px;
+  }
+  // .options{
+  //   display: flex;
+  //   justify-content: space-between;
+  //   gap: 10px;
+  //   font-size: 15px;
+  //   .option{
+  //     display: flex;
+  //     flex-direction: column;
+  //     gap: 30px;
+  //     .optionText{
+  //       display: flex;
+  //       gap: 10px;
+  //       align-items: center;
+  //       .dot{
+  //         width: 10px;
+  //         height: 10px;
+  //         border-radius: 50%;
+  //       }
+  //     }
+  //   }
+  // }
 }

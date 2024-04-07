@@ -1,5 +1,4 @@
 import Sidebar from "../../Sidebar";
-import Profile from "../../Profile/Profile";
 import "./Maincontent.scss";
 import Databox from "../Databox/Databox";
 import Navmonitor from "../Navmonitor/Navmonitor";

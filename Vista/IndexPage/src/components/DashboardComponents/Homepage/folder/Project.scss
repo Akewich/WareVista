@@ -1,0 +1,30 @@
+@import '../../Responsive.scss';
+.project{
+    background: #dcdfe7;
+    display: flex;
+    gap: 20px;
+}
+.projectContent{
+    background: #fff;
+    flex: 1;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+.wrapper{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 3rem;
+}
+@include xl{
+    .wrapper{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@include md{
+    .wrapper{
+        grid-template-columns: repeat(2,1fr);
+    }
+}

@@ -14,6 +14,9 @@ import LoginPage from "./components/LoginPage/LoginPage.tsx";
 import RegisterPage from "./components/LoginPage/RegisterPage.tsx";
 import Folder from "./components/DashboardComponents/Homepage/folder/Folder.tsx";
 import Maincontent from "./components/DashboardComponents/Monitorpage/Monitor/Maincontent.tsx";
+import Favorite from "./components/DashboardComponents/Favoritepage/Favorite/Favorite.tsx";
+import Setting from "./components/DashboardComponents/Settingpage/Setting/Setting.tsx";
+import Help from "./components/DashboardComponents/Helppage/Help/Help.tsx";
 export default function App() {
   const Homepage = () => {
     return (
@@ -28,18 +31,6 @@ export default function App() {
     );
   };
 
-  // const Design = () => {
-  //   return (
-  //     <div className="design">
-  //       <div className="menuContainer">
-  //         <Sidebar />
-  //       </div>
-  //       <div className="contentContainer">
-  //         <Outlet />
-  //       </div>
-  //     </div>
-  //   );
-  // };
   const router = createBrowserRouter([
     // Start Home Page
     {
@@ -76,16 +67,22 @@ export default function App() {
       path: "/dashboard",
       element: <Folder />,
     },
-    // {
-    //   path: "/monitor",
-    //   element: <Monitor />,
-    // },
-
+    {
+      path: "/favorite",
+      element: <Favorite />,
+    },
     {
       path: "/monitor",
       element: <Maincontent />,
     },
-
+    {
+      path: "/setting",
+      element: <Setting />,
+    },
+    {
+      path: "/help",
+      element: <Help />,
+    },
     // End Dashboard Page
   ]);
   return <RouterProvider router={router} />;

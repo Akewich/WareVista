@@ -1,41 +1,40 @@
-import {
-  AreaChart,
-  CartesianGrid,
-  Area,
-  Tooltip,
-  XAxis,
-  YAxis,
-  ResponsiveContainer,
-} from "recharts";
+import { ResponsiveContainer, Pie, PieChart, Cell, Tooltip } from "recharts";
 import "./Seconddata.scss";
 const data = [
   {
     name: "Mon",
     use: 15,
+    color: "#0088FE",
   },
   {
     name: "Tue",
     use: 30,
+    color: "#00C49F",
   },
   {
     name: "Wed",
     use: 50,
+    color: "#FFBB28",
   },
   {
     name: "Thu",
     use: 70,
+    color: "#FF8042",
   },
   {
     name: "Fri",
     use: 40,
+    color: "#0088FE",
   },
   {
     name: "Sat",
     use: 60,
+    color: "#00C49F",
   },
   {
     name: "Sun",
     use: 80,
+    color: "#FF8042",
   },
 ];
 const Seconddata = () => {
@@ -44,23 +43,26 @@ const Seconddata = () => {
       <h3>Data2</h3>
       <div className="secondChartBox">
         <ResponsiveContainer width="99%" height="100%">
-          <AreaChart
-            data={data}
-            margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
-          >
-            <Area
-              type="monotone"
-              dataKey="use"
-              stroke="#0E9CFF"
-              activeDot={{ r: 8 }}
-              fill="#c4e0f4"
-            />
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="name" />
-            <YAxis />
+          <PieChart>
+            <Pie data={data} outerRadius={"90%"} dataKey="use" label>
+              {data.map((item) => (
+                <Cell key={item.name} fill={item.color} />
+              ))}
+            </Pie>
             <Tooltip />
-          </AreaChart>
+          </PieChart>
         </ResponsiveContainer>
+        {/* <div className="options">
+          {data.map((item) => (
+            <div className="option" key={item.name}>
+              <div className="optionText">
+                <div className="dot" style={{ backgroundColor: item.color }}>
+                  <span>{item.name}</span>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div> */}
       </div>
     </div>
   );
