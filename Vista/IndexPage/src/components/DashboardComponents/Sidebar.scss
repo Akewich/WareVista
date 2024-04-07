@@ -1,0 +1,27 @@
+.sideMenu{
+    background: #DCDFE7;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin-left: 15px;
+
+    .sideList {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        
+    }
+    .sideList .navItem{
+        display: flex;
+        align-items: center;
+        transition: 0.3s ease-in-out;
+        padding: 15px;
+        gap: 10px;
+    }   
+    .sideList .navItem:hover{
+        border-radius: 5px;
+        background-color: #88ABD2;
+    }
+
+
+}
