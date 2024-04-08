@@ -11,25 +11,24 @@
         gap: 20px;
         
     }
-    .sideList .navItem{
+    & .navItem{
         display: flex;
         align-items: center;
         transition: 0.3s ease-in-out;
         padding: 15px;
         gap: 10px;
         cursor: pointer;
-    }   
-    .sideList .navItem:hover{
-        border-radius: 5px;
-        background: #88ABD2;
-    }
-    .active{
-        background: #DCDFE7 ;
-    }
-    .active::before{
-        background: #88ABD2;
-    }
 
+        &:hover{
+            border-radius: 5px;
+            background: #88ABD2;
+        }
+        &.active{
+            border-radius: 5px;
+            background: #88ABD2;
+        }
 
+    }       
+        
 
 }

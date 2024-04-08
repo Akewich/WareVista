@@ -1,4 +1,11 @@
-import { ResponsiveContainer, Pie, PieChart, Cell, Tooltip } from "recharts";
+import {
+  ResponsiveContainer,
+  Pie,
+  PieChart,
+  Cell,
+  Tooltip,
+  Legend,
+} from "recharts";
 import "./Seconddata.scss";
 const data = [
   {
@@ -37,6 +44,7 @@ const data = [
     color: "#FF8042",
   },
 ];
+
 const Seconddata = () => {
   return (
     <div className="secondBigChart">
@@ -52,17 +60,19 @@ const Seconddata = () => {
             <Tooltip />
           </PieChart>
         </ResponsiveContainer>
-        {/* <div className="options">
+        <div className="options">
           {data.map((item) => (
             <div className="option" key={item.name}>
               <div className="optionText">
-                <div className="dot" style={{ backgroundColor: item.color }}>
-                  <span>{item.name}</span>
-                </div>
+                <div
+                  className="dot"
+                  style={{ backgroundColor: item.color }}
+                ></div>
+                <span>{item.name}</span>
               </div>
             </div>
           ))}
-        </div> */}
+        </div>
       </div>
     </div>
   );
