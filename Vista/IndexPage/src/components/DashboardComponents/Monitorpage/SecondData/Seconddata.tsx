@@ -1,47 +1,30 @@
-import {
-  ResponsiveContainer,
-  Pie,
-  PieChart,
-  Cell,
-  Tooltip,
-  Legend,
-} from "recharts";
+import { ResponsiveContainer, Pie, PieChart, Cell, Tooltip } from "recharts";
 import "./Seconddata.scss";
 const data = [
   {
-    name: "Mon",
-    use: 15,
-    color: "#0088FE",
+    name: "Car ",
+    use: 41,
+    color: "#93C4FD",
   },
   {
-    name: "Tue",
+    name: "Automobile system",
+    use: 9,
+    color: "#A9BDF9",
+  },
+  {
+    name: "Engine System",
     use: 30,
-    color: "#00C49F",
+    color: "#F09A63",
   },
   {
-    name: "Wed",
-    use: 50,
-    color: "#FFBB28",
-  },
-  {
-    name: "Thu",
-    use: 70,
+    name: "Electrical System",
+    use: 15,
     color: "#FF8042",
   },
   {
-    name: "Fri",
-    use: 40,
+    name: "Car Body ",
+    use: 5,
     color: "#0088FE",
-  },
-  {
-    name: "Sat",
-    use: 60,
-    color: "#00C49F",
-  },
-  {
-    name: "Sun",
-    use: 80,
-    color: "#FF8042",
   },
 ];
 
