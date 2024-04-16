@@ -58,3 +58,62 @@ export const Project = [
         name:"Project 3"
     }
 ]
+
+export const areaChart = [
+  {
+    name: "Mon",
+    use: 15,
+  },
+  {
+    name: "Tue",
+    use: 10,
+  },
+  {
+    name: "Wed",
+    use: 25,
+  },
+  {
+    name: "Thu",
+    use: 35,
+  },
+  {
+    name: "Fri",
+    use: 20,
+  },
+  {
+    name: "Sat",
+    use: 50,
+  },
+  {
+    name: "Sun",
+    use: 80,
+  },
+];
+
+export const pieChart = [
+  {
+    name: "Car ",
+    use: 41,
+    color: "#93C4FD",
+  },
+  {
+    name: "Automobile system",
+    use: 9,
+    color: "#19BDF9",
+  },
+  {
+    name: "Engine System",
+    use: 30,
+    color: "#F09A63",
+  },
+  {
+    name: "Electrical System",
+    use: 15,
+    color: "#FF8042",
+  },
+  {
+    name: "Car Body ",
+    use: 5,
+    color: "#0088FE",
+  },
+];

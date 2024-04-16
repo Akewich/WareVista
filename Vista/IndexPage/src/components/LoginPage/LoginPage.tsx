@@ -1,6 +1,6 @@
 import { Form, Image } from "react-bootstrap";
 import imageLogo from "../../Images/WareHouseLOGO.png";
-import { Button } from "react-bootstrap";
+import { Button } from "@mui/material";
 import "./LoginPage.css";
 import { Link } from "react-router-dom";
 import imageIcon from "../../Images/googleIcon.png";
@@ -11,9 +11,9 @@ function LoginPage() {
   return (
     <>
       <NavbarHeader />
-      <div className="logIn">
+      <div className="logIn container ">
         {/* Email */}
-        <main className="formSignIn container">
+        <main className="formSignIn">
           <Form>
             <div className="formLogo">
               <Image
@@ -47,9 +47,13 @@ function LoginPage() {
             </div>
             <div className="two-col my-3 ">
               <div className="checkOne">
-                <FormControlLabel control={<Checkbox />} label="Remember me" />
+                <FormControlLabel
+                  className="formCheck"
+                  control={<Checkbox />}
+                  label="Remember me"
+                />
                 <Link
-                  className="ps-3"
+                  className="formForgot ps-3"
                   style={{ textDecorationLine: "none" }}
                   to={"/register"}
                 >
@@ -67,7 +71,9 @@ function LoginPage() {
             <Button
               variant="contained"
               style={{ borderRadius: "10px" }}
+              sx={{ color: "black" }}
               className="btnSignIn"
+              color="warning"
               type="submit"
             >
               Sign in
@@ -89,14 +95,15 @@ function LoginPage() {
         <div className="or mt-3 text-center">
           <h5>- OR -</h5>
         </div>
-        <div className="icon">
+        <div className="icon mb-4">
           <Button
-            variant="contained"
+            variant="text"
+            sx={{ color: "black", background: "#f6f6f6" }}
             className="iconSignIn"
             style={{ borderRadius: "10px" }}
             type="submit"
           >
-            <Image src={imageIcon} className="pe-2" />
+            <Image src={imageIcon} className="signGoogle pe-3" />
             Sign in with Google
           </Button>
         </div>

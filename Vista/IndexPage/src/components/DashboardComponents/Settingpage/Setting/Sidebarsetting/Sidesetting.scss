@@ -1,0 +1,29 @@
+.sideSetting{
+    background: #fff;
+    display: flex;
+    border-radius: 20px;
+    flex-direction: column;
+    height: 100vh;    
+
+    .settingList{
+        flex: 1;
+        margin-top: 100px;
+        border-radius: 20px;
+        display: flex;
+        padding: 50px;
+        flex-direction: column;
+        align-items: center;
+    }
+    & .settingItems{
+        gap: 20px; 
+        padding: 15px;
+        margin-bottom: 50px;
+        cursor: pointer;
+        transition: 0.3s ease-in-out;
+
+        &:hover{
+            border-radius: 5px;
+            background:#88ABD2;
+        }
+    }
+}

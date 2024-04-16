@@ -1,0 +1,10 @@
+@import "../../Responsive.scss";
+
+.thirdData{
+    border-color: #CBD4EE;
+    .h3{
+        @include xl{
+            font-size: 30px;
+        }
+    }
+}

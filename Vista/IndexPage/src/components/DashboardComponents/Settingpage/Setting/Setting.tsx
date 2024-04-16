@@ -1,11 +1,14 @@
 import Sidebar from "../../Sidebar";
 import "./Setting.scss";
+import Sidesetting from "./Sidebarsetting/Sidesetting";
 
 const Setting = () => {
   return (
     <div className="setting">
       <Sidebar />
-      <div className="settingContent">Setting</div>
+      <div className="sidebarSetting">
+        <Sidesetting />
+      </div>
     </div>
   );
 };

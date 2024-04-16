@@ -17,6 +17,9 @@ import Maincontent from "./components/DashboardComponents/Monitorpage/Monitor/Ma
 import Favorite from "./components/DashboardComponents/Favoritepage/Favorite/Favorite.tsx";
 import Setting from "./components/DashboardComponents/Settingpage/Setting/Setting.tsx";
 import Help from "./components/DashboardComponents/Helppage/Help/Help.tsx";
+import Account from "./components/DashboardComponents/Settingpage/Setting/Sidebarsetting/Accountsetting/Account.tsx";
+import Notification from "./components/DashboardComponents/Settingpage/Setting/Sidebarsetting/Notification/Notification.tsx";
+import Theme from "./components/DashboardComponents/Settingpage/Setting/Sidebarsetting/Themes/Theme.tsx";
 export default function App() {
   const Homepage = () => {
     return (
@@ -83,6 +86,22 @@ export default function App() {
       path: "/help",
       element: <Help />,
     },
+
+    // Setting Page
+    {
+      path: "/account",
+      element: <Account />,
+    },
+    {
+      path: "/noti",
+      element: <Notification />,
+    },
+    {
+      path: "/theme",
+      element: <Theme />,
+    },
+    // End Setting Page
+
     // End Dashboard Page
   ]);
   return <RouterProvider router={router} />;

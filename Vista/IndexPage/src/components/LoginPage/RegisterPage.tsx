@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Form, Image } from "react-bootstrap";
-import { Button } from "react-bootstrap";
+import { Button } from "@mui/material";
 import imageLogo from "../../Images/WareHouseLOGO.png";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -45,19 +45,12 @@ export default function RegisterPage() {
   return (
     <>
       <NavbarHeader />
-      <div className="logIn container">
+      <div className="register container">
         {/* Email */}
-        <main className="formSignIn w-100 m-auto">
+        <main className="formSignIn">
           <Form onSubmit={handleSubmit}>
             <div className="formLogo text-center">
-              <Image
-                className="mb-4"
-                src={imageLogo}
-                alt="WareHouse"
-                width="200"
-                height="200"
-              />
-              {!valid && <h1 className="h3 mb-3 fw-normal">Please sign in</h1>}
+              <Image src={imageLogo} alt="WareHouse" width="200" height="200" />
             </div>
             {/* Username */}
             <div className="form-floating my-2">
@@ -114,8 +107,10 @@ export default function RegisterPage() {
               // >
               <Button
                 id="submit"
+                color="warning"
+                sx={{ color: "black" }}
                 variant="contained"
-                className="btnRegis d-flex mt-5"
+                className="btnRegis mt-5"
                 type="submit"
               >
                 Register{" "}

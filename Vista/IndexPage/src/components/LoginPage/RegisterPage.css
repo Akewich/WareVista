@@ -3,15 +3,14 @@
     padding: 1rem;
 }
 .formField{
-    width: 310px;
-    height: 30px;
+    width: 400px;
+    height: 40px;
     background-color: #DDE2E7;
     border-color: #DDE2E7;
     border-radius: 15px;
     border-top:#DDE2E7;
     border-left:#DDE2E7;
     margin-top: 10px;
-    height: 40px;
 }
 .successMessage{
     text-align: center;

@@ -1,18 +1,17 @@
 .formSignIn{
-    max-width: 340px;
     padding: 1rem;
+    text-align: center;
+    
 }
 .formLogo{
-    text-align: end;
-    margin-top: 100px;
     margin-bottom: 60px;
 }
 .formCheck{
-    text-align: center;
+    justify-content: space-between;
     margin-right: 50px;
 }
 .formForgot{
-    margin-left: 11px;
+    margin-left: 90px;
 }
 .form-check-input{
     margin-right: 10px ;
@@ -35,18 +34,15 @@
     text-align: center;
     justify-content: center;
     margin-top: 50px;
-    margin-left: 100px;
 }
 .btnSignIn {
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    margin-left: 100x;
     width: 245px;
     background-color: #FF873A;
 }
 .or{ 
-    margin-left: 100px;
     color: #9A9EA3
 }
 .icon{
@@ -57,15 +53,14 @@
     text-align:center;
     align-items: center;
     justify-content: space-between;
-    background-color: #ebf3f7;
     margin-top: 20px;
-    margin-left: 100px;
 }
 .register{
     margin-top: 50px;
-    margin-left: 100px;
     color: #9A9EA3
-
+}
+.singIn{
+    background-color: #9A9EA3;
 }
 input{
     padding-left: 10px;

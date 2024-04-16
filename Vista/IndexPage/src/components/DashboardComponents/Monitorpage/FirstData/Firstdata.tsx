@@ -8,36 +8,8 @@ import {
   ResponsiveContainer,
 } from "recharts";
 import "./Firstdata.scss";
-const data = [
-  {
-    name: "Mon",
-    use: 15,
-  },
-  {
-    name: "Tue",
-    use: 10,
-  },
-  {
-    name: "Wed",
-    use: 25,
-  },
-  {
-    name: "Thu",
-    use: 35,
-  },
-  {
-    name: "Fri",
-    use: 20,
-  },
-  {
-    name: "Sat",
-    use: 50,
-  },
-  {
-    name: "Sun",
-    use: 80,
-  },
-];
+import { areaChart } from "../../../data";
+
 const Firstdata = () => {
   return (
     <div className="oneBigChart">
@@ -45,7 +17,7 @@ const Firstdata = () => {
       <div className="oneChartBox">
         <ResponsiveContainer width="99%" height="100%">
           <AreaChart
-            data={data}
+            data={areaChart}
             margin={{ top: 5, right: 20, bottom: 5, left: 0 }}
           >
             <Area
