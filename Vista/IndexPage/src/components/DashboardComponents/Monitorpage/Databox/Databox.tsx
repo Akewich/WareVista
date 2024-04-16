@@ -3,7 +3,7 @@ import Firstdata from "../FirstData/Firstdata";
 import Seconddata from "../SecondData/Seconddata";
 import { Thirddata } from "../ThirdData/Thirddata";
 import { Forthdata } from "../ForthData/Forthdata";
-import { useState } from "react";
+// import { useState } from "react";
 // import { motion, AnimateSharedLayout } from "framer-motion";
 
 // const Card = (props: any) => {

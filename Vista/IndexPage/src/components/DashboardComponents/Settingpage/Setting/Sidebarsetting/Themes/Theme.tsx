@@ -1,10 +1,8 @@
 import {
-  Box,
   createTheme,
-  IconButton,
   Radio,
   ThemeProvider,
-  useTheme,
+  // useTheme,
 } from "@mui/material";
 import Sidebar from "../../../../Sidebar";
 import Sidesetting from "../Sidesetting";
@@ -12,17 +10,17 @@ import "./Theme.scss";
 import {
   ChangeEvent,
   createContext,
-  useContext,
+  // useContext,
   useMemo,
   useState,
 } from "react";
 
 const darkTheme = createContext({ toggleColorMode: () => {} });
 
-function myTheme() {
-  const theme = useTheme();
-  const colorMode = useContext(darkTheme);
-}
+// function myTheme() {
+//   const theme = useTheme();
+//   const colorMode = useContext(darkTheme);
+// }
 
 export default function Theme() {
   const [selectedTheme, setSelectedTheme] = useState("a");
