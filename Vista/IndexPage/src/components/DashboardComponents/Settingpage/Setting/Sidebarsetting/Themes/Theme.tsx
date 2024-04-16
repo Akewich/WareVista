@@ -22,29 +22,18 @@ const darkTheme = createContext({ toggleColorMode: () => {} });
 function myTheme() {
   const theme = useTheme();
   const colorMode = useContext(darkTheme);
-
-  return (
-    <>
-      {theme.palette.mode} mode
-      <IconButton
-        sx={{ ml: 1 }}
-        onClick={colorMode.toggleColorMode}
-        color="inherit"
-      >
-        {theme.palette.mode === "dark"}
-      </IconButton>
-    </>
-  );
 }
 
 export default function Theme() {
   const [selectedTheme, setSelectedTheme] = useState("a");
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
-    setSelectedTheme(event.target.value);
-  };
-
   const [mode, setMode] = useState<"light" | "dark">("light");
+
+  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const themeMode = event.target.value;
+    setSelectedTheme(themeMode);
+    setMode(themeMode === "a" ? "light" : "dark");
+  };
 
   const colorMode = useMemo(
     () => ({
@@ -83,7 +72,6 @@ export default function Theme() {
                   name="radio-buttons"
                   inputProps={{ "aria-label": "A" }}
                 />
-                {theme.palette.mode === "light"}
                 Light
               </div>
               <div className="dark">
@@ -94,7 +82,6 @@ export default function Theme() {
                   name="radio-buttons"
                   inputProps={{ "aria-label": "B" }}
                 />
-                {theme.palette.mode === "dark"}
                 Dark
               </div>
             </div>

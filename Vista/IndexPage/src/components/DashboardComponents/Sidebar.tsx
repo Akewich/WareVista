@@ -15,11 +15,10 @@ function Sidebar() {
         <div className="sideList pt-3">
           <div>
             <Link
-              className="navItem active"
               to={"/dashboard"}
               style={{ textDecoration: "none", color: "black" }}
             >
-              <span>
+              <span className="navItem active">
                 <i className="bi bi-house-fill me-2" />
                 Home
               </span>
@@ -27,11 +26,10 @@ function Sidebar() {
           </div>
           <div>
             <Link
-              className="navItem active"
               to={"/favorite"}
               style={{ textDecoration: "none", color: "black" }}
             >
-              <span>
+              <span className="navItem active">
                 <i className="bi bi-heart-fill me-2"></i>
                 Favorite
               </span>
@@ -39,11 +37,10 @@ function Sidebar() {
           </div>
           <div>
             <Link
-              className="navItem active"
               to={"/monitor"}
               style={{ textDecoration: "none", color: "black" }}
             >
-              <span>
+              <span className="navItem active">
                 <i className="bi bi-bar-chart-line me-2"></i>
                 Monitor
               </span>
@@ -51,11 +48,10 @@ function Sidebar() {
           </div>
           <div>
             <Link
-              className="navItem active"
               to={"/setting"}
               style={{ textDecoration: "none", color: "black" }}
             >
-              <span>
+              <span className="navItem active">
                 <i className="bi bi-gear me-2"></i>
                 Setting
               </span>
@@ -63,22 +59,20 @@ function Sidebar() {
           </div>
           <div>
             <Link
-              className="navItem active"
               to={"/help"}
               style={{ textDecoration: "none", color: "black" }}
             >
-              <span>
+              <span className="navItem active">
                 <i className="bi bi-question-circle me-2"></i>
                 Help
               </span>
             </Link>
           </div>
           <Link
-            className="navItem active"
             style={{ textDecoration: "none", color: "black" }}
             to={"/login"}
           >
-            <span>
+            <span className="navItem active">
               <i className="bi bi-box-arrow-right me-2"></i>
               Logout
             </span>
