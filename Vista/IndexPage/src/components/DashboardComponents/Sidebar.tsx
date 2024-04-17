@@ -2,6 +2,8 @@ import imageLogo from "../../Images/WareHouseLOGO.png";
 import { Image } from "react-bootstrap";
 import "./Sidebar.scss";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import { Sidebarmenu } from "../data";
 
 function Sidebar() {
   return (
@@ -13,70 +15,20 @@ function Sidebar() {
           </div>
         </Link>
         <div className="sideList pt-3">
-          <div>
-            <Link
-              to={"/dashboard"}
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <span className="navItem active">
-                <i className="bi bi-house-fill me-2" />
-                Home
-              </span>
-            </Link>
-          </div>
-          <div>
-            <Link
-              to={"/favorite"}
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <span className="navItem active">
-                <i className="bi bi-heart-fill me-2"></i>
-                Favorite
-              </span>
-            </Link>
-          </div>
-          <div>
-            <Link
-              to={"/monitor"}
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <span className="navItem active">
-                <i className="bi bi-bar-chart-line me-2"></i>
-                Monitor
-              </span>
-            </Link>
-          </div>
-          <div>
-            <Link
-              to={"/setting"}
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <span className="navItem active">
-                <i className="bi bi-gear me-2"></i>
-                Setting
-              </span>
-            </Link>
-          </div>
-          <div>
-            <Link
-              to={"/help"}
-              style={{ textDecoration: "none", color: "black" }}
-            >
-              <span className="navItem active">
-                <i className="bi bi-question-circle me-2"></i>
-                Help
-              </span>
-            </Link>
-          </div>
-          <Link
-            style={{ textDecoration: "none", color: "black" }}
-            to={"/login"}
-          >
-            <span className="navItem active">
-              <i className="bi bi-box-arrow-right me-2"></i>
-              Logout
-            </span>
-          </Link>
+          {Sidebarmenu.map((item, index) => {
+            return (
+              <Link
+                to={item.url}
+                style={{ color: "black", textDecoration: "none" }}
+                key={index}
+              >
+                <div className="navItem active">
+                  <item.icon />
+                  <span className="navList">{item.title}</span>
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </>

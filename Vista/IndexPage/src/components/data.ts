@@ -1,41 +1,50 @@
+import HomeIcon from '@mui/icons-material/Home';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import EqualizerIcon from '@mui/icons-material/Equalizer';
+import SettingsIcon from '@mui/icons-material/Settings';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import LogoutIcon from '@mui/icons-material/Logout';
+
+
 export const Sidebarmenu = [
-    {
-      id: 1,
-      title: "main",
-      listItem: [
+
         {
           id: 1,
+          icon: HomeIcon,
           title: "Home",
-          url: "/folder",
-        },
-        {
-          id: 2,
-          title: "Favorite",
-          url: "/folder",
-        },
-        {
-          id: 3,
-          title: "Monitor",
           url: "/dashboard",
         },
         {
-          id: 4,
-          title: "Setting",
-          url: "/folder",
+          id: 2,
+          icon: FavoriteIcon,
+          title: "Favorite",
+          url: "/favorite",
         },
         {
-          id: 5,
-          title: "Help",
+          id: 3,
+          icon: EqualizerIcon,
+          title: "Monitor",
           url: "/monitor",
         },
         {
-          id: 6,
-          title: "Logout",
-          url: "/",
+          id: 4,
+          icon: SettingsIcon,
+          title: "Setting",
+          url: "/setting",
         },
-      ],
-    },
-  ];
+        {
+          id: 5,
+          icon: HelpOutlineIcon,
+          title: "Help",
+          url: "/help",
+        },
+        {
+          id: 6,
+          icon: LogoutIcon,
+          title: "Logout",
+          url: "/login",
+        },
+      ]
 
 import Project1 from "../Images/project1.png"
 import Project2 from "../Images/project2.png"

@@ -3,6 +3,7 @@ import Sidebar from "../../../../Sidebar";
 import Sidesetting from "../Sidesetting";
 import user from "../../../../../../Images/profile.png";
 import "./Account.scss";
+import { Link } from "react-router-dom";
 const Account = () => {
   return (
     <div className="sideAccount">
@@ -34,6 +35,12 @@ const Account = () => {
             Phone number
             <p className="userText">080-xxx-xxxx</p>{" "}
           </div>
+          <Link
+            to={"/changepass"}
+            style={{ textDecoration: "none", color: "black" }}
+          >
+            <p>Change Password</p>
+          </Link>
         </div>
       </div>
     </div>

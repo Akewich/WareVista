@@ -20,6 +20,7 @@ import Help from "./components/DashboardComponents/Helppage/Help/Help.tsx";
 import Account from "./components/DashboardComponents/Settingpage/Setting/Sidebarsetting/Accountsetting/Account.tsx";
 import Notification from "./components/DashboardComponents/Settingpage/Setting/Sidebarsetting/Notification/Notification.tsx";
 import Theme from "./components/DashboardComponents/Settingpage/Setting/Sidebarsetting/Themes/Theme.tsx";
+import Changepass from "./components/DashboardComponents/Settingpage/Setting/Sidebarsetting/Accountsetting/Changepassword/Changepass.tsx";
 export default function App() {
   const Homepage = () => {
     return (
@@ -91,6 +92,10 @@ export default function App() {
     {
       path: "/account",
       element: <Account />,
+    },
+    {
+      path: "/changepass",
+      element: <Changepass />,
     },
     {
       path: "/noti",

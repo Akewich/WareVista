@@ -1,26 +1,13 @@
-import {
-  createTheme,
-  Radio,
-  ThemeProvider,
-  // useTheme,
-} from "@mui/material";
+import { createTheme, Radio, ThemeProvider } from "@mui/material";
 import Sidebar from "../../../../Sidebar";
 import Sidesetting from "../Sidesetting";
 import "./Theme.scss";
-import {
-  ChangeEvent,
-  createContext,
-  // useContext,
-  useMemo,
-  useState,
-} from "react";
+import { ChangeEvent, createContext, useMemo, useState } from "react";
+
+// #666666;
+// #141b2d;
 
 const darkTheme = createContext({ toggleColorMode: () => {} });
-
-// function myTheme() {
-//   const theme = useTheme();
-//   const colorMode = useContext(darkTheme);
-// }
 
 export default function Theme() {
   const [selectedTheme, setSelectedTheme] = useState("a");

@@ -80,9 +80,7 @@ export default function RegisterPage() {
                   onChange={handleChange}
                 />
               )}
-              {submitted && !inputs.email && (
-                <label htmlFor="floatingInput"></label>
-              )}
+              {submitted && !inputs.email && <label htmlFor="floatingInput" />}
             </div>
 
             <div className="form-floating my-2">

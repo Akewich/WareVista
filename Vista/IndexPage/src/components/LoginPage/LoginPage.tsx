@@ -7,14 +7,49 @@ import imageIcon from "../../Images/googleIcon.png";
 import NavbarHeader from "../HeaderComponets/NavHead";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Checkbox from "@mui/material/Checkbox";
+import { useState } from "react";
+import axios from "axios";
 function LoginPage() {
+  const [inputs, setInputs] = useState({
+    email: "",
+    password: "",
+  });
+
+  const handleChange = (event: any) => {
+    /* event.persist(); NO LONGER USED IN v.17*/
+    event.preventDefault();
+
+    // const { name, value } = event.target;
+    setInputs({ ...inputs, [event.target.name]: event.target.value });
+  };
+
+  const [submitted, setSubmitted] = useState(false);
+  const [valid, setValid] = useState(false);
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    if (inputs.email && inputs.password) {
+      setValid(true);
+      console.log(inputs);
+      axios
+        .post("http://localhost:8000/login", inputs)
+        .then((res) => {
+          console.log(res.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    setSubmitted(true);
+  };
+
   return (
     <>
       <NavbarHeader />
       <div className="logIn container ">
         {/* Email */}
         <main className="formSignIn">
-          <Form>
+          <Form onSubmit={handleSubmit}>
             <div className="formLogo">
               <Image
                 className="mb-4"
@@ -26,23 +61,34 @@ function LoginPage() {
             </div>
             <div className="inputForm">
               <div className="form-floating ">
-                <input
-                  type="email"
-                  className="form-field "
-                  id="floatingInput"
-                  placeholder="name@example.com"
-                  style={{ borderRadius: 15 }}
-                />
+                {!valid && (
+                  <input
+                    type="email"
+                    className="form-field "
+                    name="email"
+                    value={inputs.email}
+                    placeholder="name@example.com"
+                    style={{ borderRadius: 15 }}
+                    onChange={handleChange}
+                  />
+                )}
               </div>
-
+              {submitted && !inputs.email && <label htmlFor="floatingInput" />}
               <div className="form-floating ">
-                <input
-                  type="password"
-                  className="form-field"
-                  id="floatingPassword"
-                  placeholder="Password"
-                  style={{ borderRadius: 15 }}
-                />
+                {!valid && (
+                  <input
+                    type="password"
+                    className="form-field"
+                    name="password"
+                    placeholder="Password"
+                    value={inputs.password}
+                    style={{ borderRadius: 15 }}
+                    onChange={handleChange}
+                  />
+                )}
+                {submitted && !inputs.password && (
+                  <label htmlFor="floatingInput"></label>
+                )}
               </div>
             </div>
             <div className="two-col my-3 ">
