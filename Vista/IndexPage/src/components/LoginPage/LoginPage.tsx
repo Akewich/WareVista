@@ -11,7 +11,7 @@ import { useState } from "react";
 import axios from "axios";
 function LoginPage() {
   const [inputs, setInputs] = useState({
-    email: "",
+    username: "",
     password: "",
   });
 
@@ -28,7 +28,7 @@ function LoginPage() {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    if (inputs.email && inputs.password) {
+    if (inputs.username && inputs.password) {
       setValid(true);
       console.log(inputs);
       axios
@@ -63,17 +63,19 @@ function LoginPage() {
               <div className="form-floating ">
                 {!valid && (
                   <input
-                    type="email"
+                    type="text"
                     className="form-field "
-                    name="email"
-                    value={inputs.email}
-                    placeholder="name@example.com"
+                    name="username"
+                    value={inputs.username}
+                    placeholder="username"
                     style={{ borderRadius: 15 }}
                     onChange={handleChange}
                   />
                 )}
               </div>
-              {submitted && !inputs.email && <label htmlFor="floatingInput" />}
+              {submitted && !inputs.username && (
+                <label htmlFor="floatingInput" />
+              )}
               <div className="form-floating ">
                 {!valid && (
                   <input
@@ -87,7 +89,7 @@ function LoginPage() {
                   />
                 )}
                 {submitted && !inputs.password && (
-                  <label htmlFor="floatingInput"></label>
+                  <label htmlFor="floatingInput" />
                 )}
               </div>
             </div>
@@ -110,21 +112,16 @@ function LoginPage() {
           </Form>
         </main>
         <div className="btnSign">
-          <Link
-            to={"/dashboard"}
-            style={{ textDecoration: "none", color: "black" }}
+          <Button
+            variant="contained"
+            style={{ borderRadius: "10px" }}
+            sx={{ color: "black" }}
+            className="btnSignIn"
+            color="warning"
+            type="submit"
           >
-            <Button
-              variant="contained"
-              style={{ borderRadius: "10px" }}
-              sx={{ color: "black" }}
-              className="btnSignIn"
-              color="warning"
-              type="submit"
-            >
-              Sign in
-            </Button>
-          </Link>
+            Sign in
+          </Button>
         </div>
         <div className="register text-center">
           <p>

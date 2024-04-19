@@ -1,0 +1,13 @@
+.navbg{
+    background: #dcdfe7;
+    padding-left: 30px;
+}
+
+.dropdown-toggle::after {
+    display: none !important; /* Hide the arrow icon */
+}
+.dropdown{
+    padding-left: 20px;
+    font-weight: bold;
+    font-size: 12px; // Adjust the font size as needed
+  }

@@ -50,7 +50,7 @@ import Project1 from "../Images/project1.png"
 import Project2 from "../Images/project2.png"
 import Project3 from "../Images/project3.png"
 
-export const Project = [
+export const files = [
     {
         id:1,
         img:Project1,

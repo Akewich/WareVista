@@ -1,33 +1,41 @@
-import "./Card.scss";
-import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
-import FavoriteIcon from "@mui/icons-material/Favorite";
 import { IconButton } from "@mui/material";
 import { useState } from "react";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FavoriteIcon from "@mui/icons-material/Favorite";
 
-const blog = (props: any) => {
-  const [liked, setLiked] = useState(false);
+const Card = ({ projectItems, onFavoriteProject }) => {
+  const { id, name, img } = project;
 
-  const handleLikedClick = () => {
-    setLiked(!liked); // Toggle the liked state
+  const [isFavorite, setIsFavorite] = useState(favorite);
+
+  const handleFavoriteChange = () => {
+    setIsFavorite((isFavorite) => !isFavorite);
+    fetch("http://localhost:8080/dashboard/${id}", {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ favorite: !favorite }),
+    })
+      .then((response) => response.json())
+      .then((updateProject) => onFavoriteProject(updateProject));
   };
 
   return (
-    <>
-      <div className="blog">
-        <img src={props.img} className="propImg" />
-        <div className="cardText">
-          <span>{props.name}</span>
-          <IconButton
-            onClick={handleLikedClick}
-            className="ms-2"
-            sx={{ fontSize: "17px" }}
-          >
-            {liked ? <FavoriteIcon className="icon" /> : <FavoriteBorderIcon />}{" "}
-          </IconButton>
-        </div>
-      </div>
-    </>
+    <div>
+      <img src={img} />
+      <span>{name}</span>
+      {isFavorite ? (
+        <IconButton onClick={handleFavoriteChange}>
+          <FavoriteBorderIcon />
+        </IconButton>
+      ) : (
+        <IconButton onClick={handleFavoriteChange}>
+          <FavoriteIcon className="icon" />
+        </IconButton>
+      )}
+    </div>
   );
 };
 
-export default blog;
+export default Card;
