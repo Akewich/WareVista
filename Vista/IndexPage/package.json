@@ -19,9 +19,11 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "framer-motion": "^11.1.1",
+    "gapi-script": "^1.2.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.1",
     "react-dom": "^18.2.0",
+    "react-google-login": "^5.2.2",
     "react-router": "^6.22.3",
     "react-router-dom": "^6.22.3",
     "recharts": "^2.12.4"

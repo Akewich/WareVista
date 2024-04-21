@@ -3,3 +3,15 @@
     padding: 0;
     font-family: inter;
 }
+
+:root{
+    --body_background: white;
+    --body_color:black;
+    --link_color:black;
+}
+
+[dark-theme = "dark"] {
+    --body_background: #252c34
+    --body_color: white;
+    --link_color:white;
+}

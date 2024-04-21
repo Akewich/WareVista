@@ -5,20 +5,26 @@ const Rightbar = () => {
   return (
     <section className="rightDesign">
       <Box
-        mt={4}
-        ml={1}
-        alignItems="center"
         sx={{
           flexGrow: 1,
-          background: "#AEAEAE",
+          background: "#282828",
           borderRadius: "5px",
         }}
-        width={225}
+        width={255}
         height={40}
       >
-        <Button sx={{ color: "#000" }}>Position</Button>
-        <Button sx={{ color: "#000" }}>Color</Button>
-        <Button sx={{ color: "#000" }}>Libraries</Button>
+        <Button
+          variant="text"
+          sx={{ color: "#fff", border: "2px black solid" }}
+        >
+          Position
+        </Button>
+        <Button sx={{ color: "#fff", borderBlock: "2px black solid" }}>
+          Color
+        </Button>
+        <Button sx={{ color: "#fff", border: "2px black solid" }}>
+          Libraries
+        </Button>
       </Box>
     </section>
   );

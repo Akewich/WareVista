@@ -1,25 +1,47 @@
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { GoogleLogin, GoogleLogout } from "react-google-login";
+import { gapi } from "gapi-script";
+import axios from "axios";
+import NavbarHeader from "../HeaderComponets/NavHead";
 import { Form, Image } from "react-bootstrap";
 import imageLogo from "../../Images/WareHouseLOGO.png";
-import { Button } from "@mui/material";
-import "./LoginPage.css";
-import { Link } from "react-router-dom";
 import imageIcon from "../../Images/googleIcon.png";
-import NavbarHeader from "../HeaderComponets/NavHead";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import Checkbox from "@mui/material/Checkbox";
-import { useState } from "react";
-import axios from "axios";
+import "./LoginPage.css";
+import { Button, Checkbox, FormControlLabel } from "@mui/material";
+
+interface Profile {
+  email: string;
+  name: string;
+  // Add other fields as needed
+}
+
 function LoginPage() {
   const [inputs, setInputs] = useState({
     username: "",
     password: "",
   });
 
-  const handleChange = (event: any) => {
-    /* event.persist(); NO LONGER USED IN v.17*/
-    event.preventDefault();
+  const clientID =
+    "681347785465-erbnts6vhfrlp09o8rvl7svk7l6cv218.apps.googleusercontent.com";
 
-    // const { name, value } = event.target;
+  const [profile, setProfile] = useState<Profile | null>(null);
+
+  const onSuccess = (res: any) => {
+    setProfile(res.profileObj);
+    console.log("success", res);
+  };
+
+  const onFailure = (res: any) => {
+    console.log("failed", res);
+  };
+
+  const logOut = () => {
+    setProfile(null);
+  };
+
+  const handleChange = (event: any) => {
+    event.preventDefault();
     setInputs({ ...inputs, [event.target.name]: event.target.value });
   };
 
@@ -35,6 +57,8 @@ function LoginPage() {
         .post("http://localhost:8000/login", inputs)
         .then((res) => {
           console.log(res.data);
+          // Handle successful login
+          setProfile(res.data.profile); // Set profile data after successful login
         })
         .catch((err) => {
           console.log(err);
@@ -45,9 +69,8 @@ function LoginPage() {
 
   return (
     <>
-      <NavbarHeader />
+      <NavbarHeader profile={profile} logOut={logOut} />
       <div className="logIn container ">
-        {/* Email */}
         <main className="formSignIn">
           <Form onSubmit={handleSubmit}>
             <div className="formLogo">
@@ -139,16 +162,22 @@ function LoginPage() {
           <h5>- OR -</h5>
         </div>
         <div className="icon mb-4">
-          <Button
-            variant="text"
-            sx={{ color: "black", background: "#f6f6f6" }}
-            className="iconSignIn"
-            style={{ borderRadius: "10px" }}
-            type="submit"
-          >
-            <Image src={imageIcon} className="signGoogle pe-3" />
-            Sign in with Google
-          </Button>
+          {profile ? (
+            <GoogleLogout
+              clientId={clientID}
+              buttonText="Logout"
+              onLogoutSuccess={logOut}
+            />
+          ) : (
+            <GoogleLogin
+              clientId={clientID}
+              buttonText="Sign in with Google "
+              onSuccess={onSuccess}
+              onFailure={onFailure}
+              cookiePolicy={"single_host_origin"}
+              isSignedIn={true}
+            />
+          )}
         </div>
       </div>
     </>
