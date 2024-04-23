@@ -3,6 +3,8 @@ import SouthIcon from "@mui/icons-material/South";
 import SearchIcon from "@mui/icons-material/Search";
 import "./Leftbar.scss";
 import {
+  Box,
+  Button,
   Collapse,
   IconButton,
   InputBase,
@@ -14,10 +16,9 @@ import {
   Toolbar,
 } from "@mui/material";
 import { useState } from "react";
-import FolderIcon from "@mui/icons-material/Folder";
+import FolderOpenIcon from "@mui/icons-material/FolderOpen";
 import InsertDriveFileIcon from "@mui/icons-material/InsertDriveFile";
 import { ExpandLess, ExpandMore } from "@mui/icons-material";
-
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
   borderRadius: theme.shape.borderRadius,
@@ -62,95 +63,111 @@ const Leftbar = () => {
   };
 
   return (
-    <section className="sideDesign">
-      <div className="search">
-        <Toolbar>
-          <Search
-            sx={{ borderRadius: "50px", background: "#ABABAB", color: "#000" }}
+    <>
+      <section className="sideDesign">
+        <div className="tool d-flex">
+          <Button
+            variant="outlined"
+            sx={{
+              flexGrow: 1,
+              background: "#535353",
+              borderRadius: "5px",
+              width: 175,
+              color: "white",
+              borderColor: "black",
+            }}
           >
-            <SearchIconWrapper>
-              <SearchIcon sx={{ color: "#000" }} />
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search..."
-              inputProps={{ "aria-label": "search" }}
-              sx={{
-                borderRadius: "50px",
-                color: "#000",
-              }}
-            />
-          </Search>
-          <div className="sorting ms-5 d-flex">
-            <IconButton>
-              <SortIcon />
-            </IconButton>
-            <IconButton>
-              <SouthIcon />
-            </IconButton>
-          </div>
-        </Toolbar>
-      </div>
-      <List>
-        <ListItemButton onClick={handleClickOpen}>
-          <ListItemIcon>
-            <FolderIcon />
-          </ListItemIcon>
-          <ListItemText secondary="Box1" />
-          {open ? <ExpandLess /> : <ExpandMore />}
-        </ListItemButton>
-        <Collapse in={open} timeout="auto">
-          <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 10 }}>
+            Elements
+          </Button>
+          <Button
+            variant="outlined"
+            sx={{
+              flexGrow: 1,
+              background: "#535353",
+              borderRadius: "5px",
+              width: 175,
+              color: "white",
+              borderColor: "black",
+            }}
+          >
+            Library
+          </Button>
+        </div>
+        <div className="search">
+          <Box
+            sx={{
+              flexGrow: 1,
+              background: "#717171",
+              borderRadius: "5px",
+            }}
+            width={255}
+            height={60}
+          >
+            <Toolbar>
+              <Search
+                sx={{
+                  borderRadius: "5px",
+                  background: "#ABABAB",
+                  color: "#fff",
+                }}
+              >
+                <SearchIconWrapper>
+                  <SearchIcon sx={{ color: "#fff", fontSize: 20 }} />
+                </SearchIconWrapper>
+                <StyledInputBase
+                  placeholder="Search..."
+                  inputProps={{ "aria-label": "search" }}
+                  sx={{
+                    color: "#fff",
+                  }}
+                />
+              </Search>
+              <div className="sorting  d-flex">
+                <IconButton sx={{ color: "white" }}>
+                  <SortIcon sx={{ color: "#fff", fontSize: 20 }} />
+                </IconButton>
+                <IconButton sx={{ color: "white" }}>
+                  <SouthIcon sx={{ color: "#fff", fontSize: 20 }} />
+                </IconButton>
+              </div>
+            </Toolbar>
+          </Box>
+        </div>
+        <div className="list">
+          <List>
+            <ListItemButton sx={{ color: "white" }} onClick={handleClickOpen}>
               <ListItemIcon>
-                <InsertDriveFileIcon />
+                <FolderOpenIcon sx={{ color: "#fff" }} />
               </ListItemIcon>
-              <ListItemText secondary="Box1.1" />
+              <ListItemText primary="Box1" sx={{ color: "white" }} />
+              {open ? <ExpandLess /> : <ExpandMore />}
             </ListItemButton>
-            <ListItemButton sx={{ pl: 10 }}>
-              <ListItemIcon>
-                <InsertDriveFileIcon />
-              </ListItemIcon>
-              <ListItemText secondary="Box1.2" />
-            </ListItemButton>
-            <ListItemButton sx={{ pl: 10 }}>
-              <ListItemIcon>
-                <InsertDriveFileIcon />
-              </ListItemIcon>
-              <ListItemText secondary="Box1.3" />
-            </ListItemButton>
+            <Collapse in={open} timeout="auto">
+              <List component="div" disablePadding>
+                <ListItemButton sx={{ pl: 10 }}>
+                  <ListItemIcon>
+                    <InsertDriveFileIcon sx={{ color: "#fff" }} />
+                  </ListItemIcon>
+                  <ListItemText primary="Box1.1" sx={{ color: "white" }} />
+                </ListItemButton>
+                <ListItemButton sx={{ pl: 10 }}>
+                  <ListItemIcon>
+                    <InsertDriveFileIcon sx={{ color: "#fff" }} />
+                  </ListItemIcon>
+                  <ListItemText primary="Box1.2" sx={{ color: "white" }} />
+                </ListItemButton>
+                <ListItemButton sx={{ pl: 10 }}>
+                  <ListItemIcon>
+                    <InsertDriveFileIcon sx={{ color: "#fff" }} />
+                  </ListItemIcon>
+                  <ListItemText primary="Box1.3" sx={{ color: "white" }} />
+                </ListItemButton>
+              </List>
+            </Collapse>
           </List>
-        </Collapse>
-        <ListItemButton onClick={handleClickOpen}>
-          <ListItemIcon>
-            <FolderIcon />
-          </ListItemIcon>
-          <ListItemText secondary="Box2" />
-          {open ? <ExpandLess /> : <ExpandMore />}
-        </ListItemButton>
-        <Collapse in={open} timeout="auto">
-          <List component="div" disablePadding>
-            <ListItemButton sx={{ pl: 10 }}>
-              <ListItemIcon>
-                <InsertDriveFileIcon />
-              </ListItemIcon>
-              <ListItemText secondary="Box2.1" />
-            </ListItemButton>
-            <ListItemButton sx={{ pl: 10 }}>
-              <ListItemIcon>
-                <InsertDriveFileIcon />
-              </ListItemIcon>
-              <ListItemText secondary="Box2.2" />
-            </ListItemButton>
-            <ListItemButton sx={{ pl: 10 }}>
-              <ListItemIcon>
-                <InsertDriveFileIcon />
-              </ListItemIcon>
-              <ListItemText secondary="Box2.3" />
-            </ListItemButton>
-          </List>
-        </Collapse>
-      </List>
-    </section>
+        </div>
+      </section>
+    </>
   );
 };
 

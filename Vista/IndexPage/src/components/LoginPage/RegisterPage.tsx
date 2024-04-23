@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Form, Image } from "react-bootstrap";
 import { Button } from "@mui/material";
 import imageLogo from "../../Images/WareHouseLOGO.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./RegisterPage.css";
 import NavbarHeader from "../HeaderComponets/NavHead";
@@ -13,6 +13,8 @@ export default function RegisterPage() {
     email: "",
     password: "",
   });
+
+  const navigateTo = useNavigate();
 
   const handleChange = (event: any) => {
     /* event.persist(); NO LONGER USED IN v.17*/
@@ -31,12 +33,16 @@ export default function RegisterPage() {
       setValid(true);
       console.log(inputs);
       axios
-        .post("http://localhost:8000/register", inputs)
+        .post("https://server-s6xn.onrender.com/register", inputs)
         .then((res) => {
           console.log(res.data);
+          setSubmitted(true);
+          // Navigate to login page
+          navigateTo("/login");
         })
         .catch((err) => {
           console.log(err);
+          navigateTo("/register");
         });
     }
     setSubmitted(true);
@@ -99,10 +105,6 @@ export default function RegisterPage() {
               )}
             </div>
             {!valid && (
-              // <Link
-              //   to={"/login"}
-              //   style={{ textDecoration: "none", color: "black" }}
-              // >
               <Button
                 id="submit"
                 color="warning"
@@ -121,21 +123,6 @@ export default function RegisterPage() {
                   Already have an acoount?
                 </Link>
               </p>
-            )}
-            {submitted && valid && (
-              <div className="successMessage">
-                <h3>
-                  {""} Welcome {inputs.username}{" "}
-                </h3>
-                <div> Your Account is successful! </div>
-              </div>
-            )}
-            {submitted && valid && (
-              <div className="goLogin mt-5">
-                <Link to={"/Login"}>
-                  <Button variant="contained">Login</Button>
-                </Link>
-              </div>
             )}
           </Form>
         </main>

@@ -1,7 +1,77 @@
 .rightDesign{
-    background: #282828;
+    background: #535353;
     display: flex;
-    width: 350px;
+    width: 255px;
     height: 100vh;
-    margin-top: 90px;
+}
+.itemPick{
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+}
+.line{
+    margin: 13px;
+    border-bottom: #999999 solid;
+    
+}
+.lineTool{
+    margin-top: 13px;
+}
+.scaleSet{
+    margin-top: 20px;
+    margin-left: 40px;
+    text-align: start;
+}
+.text{
+    color: #fff;
+    padding-right: 5px;
+    font-size: 12px;
+}
+.scaleSetBox{
+    width: 70px;
+    align-items: center;
+    background-color: #454545;
+    border: #fff;
+    font-size: 12px;
+}
+.scaleSetBox span{
+    font-size: 12px
+}
+.postionShow{
+    display: grid;
+    grid-template-columns: 2fr 2fr ;
+}
+.scaleForm{
+    width: 150px;
+    height: 20px;
+    background-color: #454545;
+    border: #fff;
+    font-size: 12px;
+}
+.scaleForm input{
+    color: #fff;
+}
+.topicTool{
+    margin-left: 20px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+}
+.iconShow{
+    color: white;
+}
+.iconShowBox{
+    color: white;
+    margin-top: 7px;
+}
+.textBox{
+    color: white;
+    margin: 10px;
+    font-size: 12px;
+}
+.iconLock{
+    color: #8E8E8E;
+    }
+.iconKey{
+    margin-left: 100px;
 }

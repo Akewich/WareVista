@@ -1,18 +1,16 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
-import { gapi } from "gapi-script";
 import axios from "axios";
 import NavbarHeader from "../HeaderComponets/NavHead";
 import { Form, Image } from "react-bootstrap";
 import imageLogo from "../../Images/WareHouseLOGO.png";
-import imageIcon from "../../Images/googleIcon.png";
 import "./LoginPage.css";
 import { Button, Checkbox, FormControlLabel } from "@mui/material";
 
 interface Profile {
   email: string;
-  name: string;
+  username: string;
   // Add other fields as needed
 }
 
@@ -21,6 +19,8 @@ function LoginPage() {
     username: "",
     password: "",
   });
+
+  const navigateTo = useNavigate();
 
   const clientID =
     "681347785465-erbnts6vhfrlp09o8rvl7svk7l6cv218.apps.googleusercontent.com";
@@ -40,39 +40,47 @@ function LoginPage() {
     setProfile(null);
   };
 
-  const handleChange = (event: any) => {
-    event.preventDefault();
-    setInputs({ ...inputs, [event.target.name]: event.target.value });
-  };
-
   const [submitted, setSubmitted] = useState(false);
   const [valid, setValid] = useState(false);
 
-  const handleSubmit = (e: any) => {
+  const handleChange = (event: any) => {
+    /* event.persist(); NO LONGER USED IN v.17*/
+    event.preventDefault();
+
+    // const { name, value } = event.target;
+    setInputs({ ...inputs, [event.target.name]: event.target.value });
+  };
+
+  const loginUser = (e: any) => {
     e.preventDefault();
     if (inputs.username && inputs.password) {
-      setValid(true);
+      setValid(false);
       console.log(inputs);
       axios
-        .post("http://localhost:8000/login", inputs)
+        .post("https://server-s6xn.onrender.com/login", inputs)
         .then((res) => {
           console.log(res.data);
-          // Handle successful login
-          setProfile(res.data.profile); // Set profile data after successful login
+          setSubmitted(true);
+          navigateTo("/dashboard");
         })
         .catch((err) => {
           console.log(err);
+          // Reset the submitted state to false
+          setSubmitted(false);
+          // Show error message to the user
+          alert("Login failed. Please check your username and password.");
         });
     }
+    // Set submitted to true outside the if condition
     setSubmitted(true);
   };
 
   return (
     <>
-      <NavbarHeader profile={profile} logOut={logOut} />
+      <NavbarHeader />
       <div className="logIn container ">
         <main className="formSignIn">
-          <Form onSubmit={handleSubmit}>
+          <Form onSubmit={loginUser}>
             <div className="formLogo">
               <Image
                 className="mb-4"
@@ -89,16 +97,16 @@ function LoginPage() {
                     type="text"
                     className="form-field "
                     name="username"
-                    value={inputs.username}
                     placeholder="username"
                     style={{ borderRadius: 15 }}
                     onChange={handleChange}
                   />
                 )}
+                {submitted && !inputs.username && (
+                  <label htmlFor="floatingInput"></label>
+                )}
               </div>
-              {submitted && !inputs.username && (
-                <label htmlFor="floatingInput" />
-              )}
+
               <div className="form-floating ">
                 {!valid && (
                   <input
@@ -106,7 +114,6 @@ function LoginPage() {
                     className="form-field"
                     name="password"
                     placeholder="Password"
-                    value={inputs.password}
                     style={{ borderRadius: 15 }}
                     onChange={handleChange}
                   />
@@ -116,68 +123,78 @@ function LoginPage() {
                 )}
               </div>
             </div>
-            <div className="two-col my-3 ">
-              <div className="checkOne">
-                <FormControlLabel
-                  className="formCheck"
-                  control={<Checkbox />}
-                  label="Remember me"
-                />
-                <Link
-                  className="formForgot ps-3"
-                  style={{ textDecorationLine: "none" }}
-                  to={"/register"}
-                >
-                  Forgot Password?
-                </Link>{" "}
-              </div>
+            <div className="two-col my-3">
+              {!valid && (
+                <div className="checkOne">
+                  <FormControlLabel
+                    className="formCheck"
+                    control={<Checkbox />}
+                    label="Remember me"
+                  />
+                  <Link
+                    className="formForgot ps-3"
+                    style={{ textDecorationLine: "none" }}
+                    to={"/register"}
+                  >
+                    Forgot Password?
+                  </Link>{" "}
+                </div>
+              )}
             </div>
           </Form>
         </main>
         <div className="btnSign">
-          <Button
-            variant="contained"
-            style={{ borderRadius: "10px" }}
-            sx={{ color: "black" }}
-            className="btnSignIn"
-            color="warning"
-            type="submit"
-          >
-            Sign in
-          </Button>
+          {!valid && (
+            <Button
+              id="submit"
+              color="warning"
+              sx={{ color: "black" }}
+              variant="contained"
+              className="btnRegis mt-5"
+              type="submit"
+              onClick={loginUser}
+            >
+              Sign in{" "}
+            </Button>
+          )}
         </div>
         <div className="register text-center">
-          <p>
-            Don't have an account ?{" "}
-            <Link
-              className="ps-3"
-              style={{ textDecorationLine: "none" }}
-              to={"/register"}
-            >
-              Click me
-            </Link>{" "}
-          </p>
-        </div>
-        <div className="or mt-3 text-center">
-          <h5>- OR -</h5>
-        </div>
-        <div className="icon mb-4">
-          {profile ? (
-            <GoogleLogout
-              clientId={clientID}
-              buttonText="Logout"
-              onLogoutSuccess={logOut}
-            />
-          ) : (
-            <GoogleLogin
-              clientId={clientID}
-              buttonText="Sign in with Google "
-              onSuccess={onSuccess}
-              onFailure={onFailure}
-              cookiePolicy={"single_host_origin"}
-              isSignedIn={true}
-            />
+          {!valid && (
+            <p>
+              Don't have an account ?{" "}
+              <Link
+                className="ps-3"
+                style={{ textDecorationLine: "none" }}
+                to={"/register"}
+              >
+                Click me
+              </Link>{" "}
+            </p>
           )}
+        </div>
+        {!valid && (
+          <div className="or mt-3 text-center">
+            <h5>- OR -</h5>
+          </div>
+        )}
+        <div className="icon mb-4">
+          {!valid && // Render Google login button only if the form is not submitted
+            (profile ? (
+              <GoogleLogout
+                clientId={clientID}
+                buttonText="Logout"
+                onLogoutSuccess={logOut}
+              />
+            ) : (
+              <GoogleLogin
+                clientId={clientID}
+                buttonText="Sign in with Google "
+                onSuccess={onSuccess}
+                onFailure={onFailure}
+                cookiePolicy={"single_host_origin"}
+                isSignedIn={true}
+              />
+            ))}
         </div>
       </div>
     </>

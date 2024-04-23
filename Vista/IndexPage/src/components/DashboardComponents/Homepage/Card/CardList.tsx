@@ -3,6 +3,7 @@ import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import FavoriteIcon from "@mui/icons-material/Favorite";
 import { IconButton } from "@mui/material";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const CardList = (props: any) => {
   const [liked, setLiked] = useState(false);
@@ -14,15 +15,17 @@ const CardList = (props: any) => {
   return (
     <>
       <div className="blog">
-        <img src={props.img} className="propImg" />
+        <Link to={"/design"}>
+          <img src={props.img} className="propImg" />
+        </Link>
         <div className="cardText">
-          <span>{props.name}</span>
+          <span className="projectName">{props.name}</span>
           <IconButton
             onClick={handleLikedClick}
             className="iconBtn ms-2"
             sx={{ fontSize: "17px" }}
           >
-            {/* {liked ? <FavoriteIcon className="icon" /> : <FavoriteBorderIcon />}{" "} */}
+            {liked ? <FavoriteIcon className="icon" /> : <FavoriteBorderIcon />}{" "}
           </IconButton>
         </div>
       </div>

@@ -29,9 +29,7 @@ const Project = () => {
           </Button>
           {createProject && <Popup setCreateProject={setCreateProject} />}
 
-          <Button className="" variant="secondary">
-            Import
-          </Button>
+          <Button variant="secondary">Import</Button>
           <div className="wrapper">{card}</div>
         </div>
 

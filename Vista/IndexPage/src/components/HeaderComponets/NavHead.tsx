@@ -3,19 +3,7 @@ import imageLogo from "../../Images/WareHouseLOGO.png";
 import { Link } from "react-router-dom";
 import { Button } from "@mui/material";
 
-interface Profile {
-  email: string;
-  name: string;
-  profilePicture?: string; // Optional profile picture URL
-  // Add other fields as needed
-}
-
-interface NavbarHeaderProps {
-  profile: Profile | null;
-  logOut: () => void;
-}
-
-const NavbarHeader: React.FC<NavbarHeaderProps> = ({ profile }) => {
+const NavbarHeader = () => {
   return (
     <>
       <Navbar
@@ -33,51 +21,33 @@ const NavbarHeader: React.FC<NavbarHeaderProps> = ({ profile }) => {
               <Nav.Link as={Link} to={"/#"} style={{ color: "white" }}>
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to={"/about"} style={{ color: "white" }}>
+              <Nav.Link as={Link} to={"/"} style={{ color: "white" }}>
                 About
               </Nav.Link>
               <Nav.Link as={Link} to={"/dashboard"} style={{ color: "white" }}>
                 Design
               </Nav.Link>
-              <Nav.Link as={Link} to={"/report"} style={{ color: "white" }}>
+              <Nav.Link as={Link} to={"/"} style={{ color: "white" }}>
                 Report
               </Nav.Link>
-              <Nav.Link as={Link} to={"/document"} style={{ color: "white" }}>
+              <Nav.Link as={Link} to={"/"} style={{ color: "white" }}>
                 Document
               </Nav.Link>
             </Nav>
-            {profile ? (
-              <div style={{ display: "flex", alignItems: "center" }}>
-                {profile.profilePicture && (
-                  <img
-                    src={profile.profilePicture}
-                    width={50}
-                    height={50}
-                    alt="Profile"
-                    className="me-2"
-                  />
-                )}
-                <span className="ms-5" style={{ color: "white" }}>
-                  {profile.name}
-                </span>
-              </div>
-            ) : (
-              // If not logged in, display the Sign In button
-              <Button
-                className="fs-5"
-                style={{ color: "black" }}
-                color="warning"
-                variant="contained"
-                sx={{ borderRadius: "12px" }}
+            <Button
+              className="fs-5"
+              style={{ color: "black" }}
+              color="warning"
+              variant="contained"
+              sx={{ borderRadius: "12px" }}
+            >
+              <Link
+                to={"/login"}
+                style={{ textDecoration: "none", color: "black" }}
               >
-                <Link
-                  to={"/login"}
-                  style={{ textDecoration: "none", color: "black" }}
-                >
-                  Sign In
-                </Link>
-              </Button>
-            )}
+                Sign In
+              </Link>
+            </Button>
           </Navbar.Collapse>
         </Container>
       </Navbar>

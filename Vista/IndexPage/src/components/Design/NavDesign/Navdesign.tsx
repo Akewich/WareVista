@@ -37,7 +37,7 @@ const Navdesign = () => {
 
   return (
     <Navbar expand="lg" className="navbg ">
-      <Navbar.Brand as={Link} to={"/#"}>
+      <Navbar.Brand as={Link} to={"/dashboard"}>
         <Image src={ImageLogo} width={30} height={30} />
       </Navbar.Brand>
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />

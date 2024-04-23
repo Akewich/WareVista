@@ -2,7 +2,6 @@ import imageLogo from "../../Images/WareHouseLOGO.png";
 import { Image } from "react-bootstrap";
 import "./Sidebar.scss";
 import { Link } from "react-router-dom";
-import { useState } from "react";
 import { Sidebarmenu } from "../data";
 
 function Sidebar() {
