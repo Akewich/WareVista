@@ -46,24 +46,22 @@ export const Sidebarmenu = [
         },
       ]
 
-import Project1 from "../Images/project1.png"
-import Project2 from "../Images/project2.png"
-import Project3 from "../Images/project3.png"
+
 
 export const files = [
     {
         id:1,
-        img:Project1,
+        img:'https://www.m-h-e.com/wp-content/uploads/2015/08/marketing-info-drawing-modenew.jpg',
         name:"Project 1"
     },
     {
         id:2,
-        img:Project2,
+        img:"https://www.m-h-e.com/wp-content/uploads/2015/08/marketing-info-drawing-modenew.jpg",
         name:"Project 2"
     },
     {
         id:3,
-        img:Project3,
+        img:"https://www.m-h-e.com/wp-content/uploads/2015/08/marketing-info-drawing-modenew.jpg",
         name:"Project 3"
     }
 ]

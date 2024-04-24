@@ -1,12 +1,5 @@
-import React, { useState } from "react";
-import {
-  Container,
-  Dropdown,
-  Image,
-  Nav,
-  Navbar,
-  NavDropdown,
-} from "react-bootstrap";
+import { useState } from "react";
+import { Image, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import ImageLogo from "../../../Images/WareHouseLOGO.png";
 import "./Navdesign.scss";
 import { Link } from "react-router-dom";
@@ -16,10 +9,6 @@ const Navdesign = () => {
 
   const openNavMenu = (eventKey: any) => {
     setOpenMenu(eventKey);
-  };
-
-  const handleCloseNavMenu = () => {
-    setOpenMenu(null);
   };
 
   const navMenu = [
