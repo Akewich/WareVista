@@ -10,5 +10,28 @@
     padding: 2rem;
     display: flex;
     gap: 1.5rem;
-    justify-content: space-between;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.upload{
+    text-align: center;
+}
+.comment{
+    text-align: center;
+    margin-top: 60px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.commentBox{
+    width: 720px;
+    height: 240px;
+    border-radius: 15px;
+    background: #fff;
+    border: #fff;
+}
+.submitBox{
+    text-align: center;
+    margin-top: 30px;
 }

@@ -1,3 +1,4 @@
+@import '../../Responsive.scss';
 .favorite{
     background: #DCDFE7;
     display: flex;
@@ -10,5 +11,20 @@
     padding: 2rem;
     display: flex;
     gap: 1.5rem;
-    justify-content: space-between;
+    justify-content: start;
+}
+.boxFav{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 3rem;
+}
+@include xl{
+    .boxFav{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@include md{
+    .boxFav{
+        grid-template-columns: repeat(2,1fr);
+    }
 }

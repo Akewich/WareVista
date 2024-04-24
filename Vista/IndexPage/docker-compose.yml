@@ -4,11 +4,12 @@ services:
     build: . # address
     ports:
       - "8080:8080"
-    container_name: warevista
-    volumes:
-      - '/usr/src/app'
-      - '/usr/src/app/node_modules'
-    command: npm run preview
+    # volumes:
+    #   - '/usr/src/app'
+    #   - '/usr/src/app/node_modules'
+    # command: npm run preview
+
+    
   # vite:
   #   build: .
   #   entrypoint: ./docker-vite.sh

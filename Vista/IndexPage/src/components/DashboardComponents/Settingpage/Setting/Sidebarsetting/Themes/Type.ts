@@ -1,9 +1,9 @@
 export enum iThemeMode {
-    LIGHT = 'ligh',
+    LIGHT = 'light',
     DARK = 'dark'
 }
 
 export interface iThemeContext {
     themeMode : iThemeMode;
     switchThemeMode: (mode: iThemeMode) => void
-}
+}   

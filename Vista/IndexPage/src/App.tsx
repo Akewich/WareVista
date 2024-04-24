@@ -17,32 +17,35 @@ import Changepass from "./components/DashboardComponents/Settingpage/Setting/Sid
 import Project from "./components/DashboardComponents/Homepage/folder/Project.tsx";
 import Indexhomepage from "./components/ContentComponents/Indexhomepage.tsx";
 import Warehouse from "./components/Design/CreatProject/Warehouse.tsx";
+import { ThemeContextProvider } from "./components/DashboardComponents/Settingpage/Setting/Sidebarsetting/Themes/indexTheme.tsx";
 
 function App() {
   return (
-    <Routes>
-      {/* Home Page */}
-      <Route path="/" element={<Indexhomepage />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/document" element={<Document />} />
-      <Route path="/report" element={<Report />} />
-      {/* Login & Register */}
-      <Route path="/login" element={<LoginPage />} />
-      <Route path="/register" element={<RegisterPage />} />
-      {/* Dashboard Page */}
-      <Route path="/dashboard" element={<Project />} />
-      <Route path="/favorite" element={<Favorite />} />
-      <Route path="/monitor" element={<Maincontent />} />
-      <Route path="/setting" element={<Setting />} />
-      <Route path="/help" element={<Help />} />
-      {/* Account */}
-      <Route path="/account" element={<Account />} />
-      <Route path="/changepass" element={<Changepass />} />
-      <Route path="/noti" element={<Notification />} />
-      <Route path="/theme" element={<Theme />} />
-      {/* Design warehouse */}
-      <Route path="/design" element={<Warehouse />} />
-    </Routes>
+    <ThemeContextProvider>
+      <Routes>
+        {/* Home Page */}
+        <Route path="/" element={<Indexhomepage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/document" element={<Document />} />
+        <Route path="/report" element={<Report />} />
+        {/* Login & Register */}
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} />
+        {/* Dashboard Page */}
+        <Route path="/dashboard" element={<Project />} />
+        <Route path="/favorite" element={<Favorite />} />
+        <Route path="/monitor" element={<Maincontent />} />
+        <Route path="/setting" element={<Setting />} />
+        <Route path="/help" element={<Help />} />
+        {/* Account */}
+        <Route path="/account" element={<Account />} />
+        <Route path="/changepass" element={<Changepass />} />
+        <Route path="/noti" element={<Notification />} />
+        <Route path="/theme" element={<Theme />} />
+        {/* Design warehouse */}
+        <Route path="/design" element={<Warehouse />} />
+      </Routes>
+    </ThemeContextProvider>
   );
   // const router = createBrowserRouter([
   //   // Start Home Page
