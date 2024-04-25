@@ -46,6 +46,8 @@ const Rightbar = () => {
   return (
     <>
       <div className="rightDesign">
+        {/* canvas API */}
+
         <div className="toolsBox">
           <Box
             sx={{
@@ -77,18 +79,7 @@ const Rightbar = () => {
               Libraries
             </Button>
           </Box>
-          <div className="itemPick">
-            <Box
-              sx={{
-                flexGrow: 1,
 
-                bgcolor: "white",
-                borderRadius: "5px",
-              }}
-              width={220}
-              height={80}
-            ></Box>
-          </div>
           {/* Scale */}
           <div className="line"></div>
           <span className="topicTool">Scale</span>
