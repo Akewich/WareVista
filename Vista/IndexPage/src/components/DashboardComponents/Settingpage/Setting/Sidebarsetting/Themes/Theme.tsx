@@ -10,7 +10,7 @@ import Sidesetting from "../Sidesetting";
 import "./Theme.scss";
 import React, { useContext } from "react";
 import { iThemeContext, iThemeMode } from "./Type";
-import { ThemeContext } from "./indexTheme";
+import { ThemeContext, ThemeContextProvider } from "./indexTheme";
 
 const Theme: React.FunctionComponent = () => {
   const { themeMode, switchThemeMode } = useContext(

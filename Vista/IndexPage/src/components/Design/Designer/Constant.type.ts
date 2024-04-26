@@ -16,6 +16,6 @@ export type Scribble = Shape & {
     points: number[];
   };
   
-export type Line = Shape & {
+export type Lines = Shape & {
     points: [number, number, number, number];
   };

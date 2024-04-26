@@ -1,5 +1,6 @@
 import { files } from "../../../data";
 import CardList from "../../Homepage/Card/CardList";
+import { ThemeContextProvider } from "../../Settingpage/Setting/Sidebarsetting/Themes/indexTheme";
 import Sidebar from "../../Sidebar";
 import "./Favorite.scss";
 
@@ -8,6 +9,9 @@ const Favorite = () => {
     return <CardList img={item.img} name={item.name} />;
   });
   return (
+    <>
+    <ThemeContextProvider> 
+
     <div className="favorite">
       <Sidebar />
       <div className="favoriteContent">
@@ -15,6 +19,8 @@ const Favorite = () => {
         <div className="boxFav">{card}</div>
       </div>
     </div>
+    </ThemeContextProvider>
+    </>
   );
 };
 

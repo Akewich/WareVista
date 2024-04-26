@@ -1,4 +1,4 @@
-import { ArrowsMove, ArrowUpLeft, Pencil, Square } from "react-bootstrap-icons";
+import { ArrowUpLeft, Pencil, Square } from "react-bootstrap-icons";
 
 export enum ACTIONS {
   SELECT = "SELECT",
