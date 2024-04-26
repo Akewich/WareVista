@@ -1,8 +1,8 @@
-import React from "react";
 import { Nav, Container, Navbar, Image } from "react-bootstrap";
 import imageLogo from "../../Images/WareHouseLOGO.png";
-import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
+import { Button } from "@mui/material";
+
 const NavbarHeader = () => {
   return (
     <>
@@ -21,21 +21,21 @@ const NavbarHeader = () => {
               <Nav.Link as={Link} to={"/#"} style={{ color: "white" }}>
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to={"/about"} style={{ color: "white" }}>
+              <Nav.Link as={Link} to={"/"} style={{ color: "white" }}>
                 About
               </Nav.Link>
-              <Nav.Link as={Link} to={"/design"} style={{ color: "white" }}>
+              <Nav.Link as={Link} to={"/dashboard"} style={{ color: "white" }}>
                 Design
               </Nav.Link>
-              <Nav.Link as={Link} to={"/report"} style={{ color: "white" }}>
+              <Nav.Link as={Link} to={"/"} style={{ color: "white" }}>
                 Report
               </Nav.Link>
-              <Nav.Link as={Link} to={"/document"} style={{ color: "white" }}>
+              <Nav.Link as={Link} to={"/"} style={{ color: "white" }}>
                 Document
               </Nav.Link>
             </Nav>
             <Button
-              className="signIn fs-5"
+              className="fs-5"
               style={{ color: "black" }}
               color="warning"
               variant="contained"

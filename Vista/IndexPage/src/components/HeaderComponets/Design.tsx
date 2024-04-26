@@ -1,11 +1,11 @@
-import React from "react";
+import { Box } from "@mui/material";
 import NavbarHeader from "./NavHead";
 
 const Design = () => {
   return (
     <>
       <NavbarHeader />
-      <h1>This is Design Page</h1>
+      <Box>This is Design Page</Box>
     </>
   );
 };

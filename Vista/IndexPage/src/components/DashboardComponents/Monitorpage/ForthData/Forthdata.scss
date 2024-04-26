@@ -1,0 +1,10 @@
+@import "../../Responsive.scss";
+
+.forthData{
+  border-color: #CBD4EE;
+    .h3{
+        @include xl{
+            font-size: 20px;
+        }
+    }
+}

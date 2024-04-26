@@ -1,0 +1,38 @@
+@import "../../Responsive.scss";
+.secondBigChart{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    h3{
+      @include xxl{
+        font-size: 25px;
+    }
+  }
+  .secondChartBox{
+    width: 660px;
+    height: 400px;
+  }
+  .options{
+    display: flex;
+    justify-content:space-around;
+    gap: 10px;
+    font-size: 15px;
+    .option{
+      display:flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      .optionText{
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        .dot{
+          width: 10px;
+          height: 10px;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

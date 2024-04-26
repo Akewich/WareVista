@@ -1,0 +1,126 @@
+import HomeIcon from '@mui/icons-material/Home';
+import FavoriteIcon from '@mui/icons-material/Favorite';
+import EqualizerIcon from '@mui/icons-material/Equalizer';
+import SettingsIcon from '@mui/icons-material/Settings';
+import HelpOutlineIcon from '@mui/icons-material/HelpOutline';
+import LogoutIcon from '@mui/icons-material/Logout';
+
+
+export const Sidebarmenu = [
+
+        {
+          id: 1,
+          icon: HomeIcon,
+          title: "Home",
+          url: "/dashboard",
+        },
+        {
+          id: 2,
+          icon: FavoriteIcon,
+          title: "Favorite",
+          url: "/favorite",
+        },
+        {
+          id: 3,
+          icon: EqualizerIcon,
+          title: "Monitor",
+          url: "/monitor",
+        },
+        {
+          id: 4,
+          icon: SettingsIcon,
+          title: "Setting",
+          url: "/setting",
+        },
+        {
+          id: 5,
+          icon: HelpOutlineIcon,
+          title: "Help",
+          url: "/help",
+        },
+        {
+          id: 6,
+          icon: LogoutIcon,
+          title: "Logout",
+          url: "/login",
+        },
+      ]
+
+
+
+export const files = [
+    {
+        id:1,
+        img:'https://www.m-h-e.com/wp-content/uploads/2015/08/marketing-info-drawing-modenew.jpg',
+        name:"Project 1"
+    },
+    {
+        id:2,
+        img:"https://www.m-h-e.com/wp-content/uploads/2015/08/marketing-info-drawing-modenew.jpg",
+        name:"Project 2"
+    },
+    {
+        id:3,
+        img:"https://www.m-h-e.com/wp-content/uploads/2015/08/marketing-info-drawing-modenew.jpg",
+        name:"Project 3"
+    }
+]
+
+export const areaChart = [
+  {
+    name: "Mon",
+    use: 15,
+  },
+  {
+    name: "Tue",
+    use: 10,
+  },
+  {
+    name: "Wed",
+    use: 25,
+  },
+  {
+    name: "Thu",
+    use: 35,
+  },
+  {
+    name: "Fri",
+    use: 20,
+  },
+  {
+    name: "Sat",
+    use: 50,
+  },
+  {
+    name: "Sun",
+    use: 80,
+  },
+];
+
+export const pieChart = [
+  {
+    name: "Car ",
+    use: 41,
+    color: "#93C4FD",
+  },
+  {
+    name: "Automobile system",
+    use: 9,
+    color: "#19BDF9",
+  },
+  {
+    name: "Engine System",
+    use: 30,
+    color: "#F09A63",
+  },
+  {
+    name: "Electrical System",
+    use: 15,
+    color: "#FF8042",
+  },
+  {
+    name: "Car Body ",
+    use: 5,
+    color: "#0088FE",
+  },
+];

@@ -1,0 +1,30 @@
+@import '../../Responsive.scss';
+.favorite{
+    background: #DCDFE7;
+    display: flex;
+    gap: 20px;
+}
+.favoriteContent{
+    background: #fff;
+    flex: 1;
+    border-radius: 20px;
+    padding: 2rem;
+    display: flex;
+    gap: 1.5rem;
+    justify-content: start;
+}
+.boxFav{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 3rem;
+}
+@include xl{
+    .boxFav{
+        grid-template-columns: repeat(3,1fr);
+    }
+}
+@include md{
+    .boxFav{
+        grid-template-columns: repeat(2,1fr);
+    }
+}

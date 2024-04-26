@@ -1,0 +1,43 @@
+.popUpBox{
+    position: fixed;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.popUpHearder{
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    margin: 0;
+}
+.closeIcon{
+    cursor: pointer;
+}
+.popUpBody{
+    padding-top: 5px;
+}
+.popUpContent{
+    position: relative;
+    background: white;
+    width: 400px;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.formInput{
+    width: 300px;
+    border-radius: 20px;
+    background-color: lightgray;
+    height: 30px;
+}
+@keyframes dropTop {
+    0% {
+      transform: translateY(-100%) scale(0);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%) scale(1);
+      opacity: 1;
+    }
+  }

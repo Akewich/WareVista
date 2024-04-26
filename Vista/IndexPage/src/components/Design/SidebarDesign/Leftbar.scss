@@ -1,0 +1,17 @@
+.sideDesign{
+    background: #535353;
+    flex-direction: column;
+    display: flex;
+    width: 255px;
+    height: 100vh;
+}
+.tool{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    color: white;
+}
+.tool:hover{
+    background: #535353;
+}

@@ -1,4 +1,3 @@
-import React from "react";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -8,6 +7,7 @@ import imageLogo from "../../Images/WareHouseLOGO.png";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
+// Navbar For Hompage
 const Header = () => {
   return (
     <>
@@ -22,16 +22,16 @@ const Header = () => {
               <Nav.Link as={Link} to={"/"} style={{ color: "white" }}>
                 Home
               </Nav.Link>
-              <Nav.Link as={Link} to={"/about"} style={{ color: "white" }}>
+              <Nav.Link as={Link} to={"/"} style={{ color: "white" }}>
                 About
               </Nav.Link>
-              <Nav.Link as={Link} to={"/design"} style={{ color: "white" }}>
+              <Nav.Link as={Link} to={"/dashboard"} style={{ color: "white" }}>
                 Design
               </Nav.Link>
-              <Nav.Link as={Link} to={"/report"} style={{ color: "white" }}>
+              <Nav.Link as={Link} to={"/"} style={{ color: "white" }}>
                 Report
               </Nav.Link>
-              <Nav.Link as={Link} to={"/document"} style={{ color: "white" }}>
+              <Nav.Link as={Link} to={"/"} style={{ color: "white" }}>
                 Document
               </Nav.Link>
             </Nav>

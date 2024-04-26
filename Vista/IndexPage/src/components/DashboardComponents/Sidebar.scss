@@ -1,0 +1,36 @@
+@import './Responsive.scss';
+.sideMenu{
+    background: #DCDFE7;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    .sideBarLogo{
+        margin-left: 15px;
+    }
+    .sideList {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+    }
+    
+    
+}
+
+.navItem{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    transition: 0.3s ease-in-out;
+    padding: 20px;
+    gap: 10px;
+    cursor: pointer;
+}       
+.navItem:hover{
+    border-radius: 20px;
+    background: #88ABD2;
+}
+
+.active::before{
+    background:#88ABD2;
+    border-radius: 20px;
+}

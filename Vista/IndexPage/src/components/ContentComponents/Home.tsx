@@ -1,9 +1,4 @@
-import React from "react";
-<<<<<<<< Updated upstream:Vista/IndexPage/src/components/ContentConponents/Home.tsx
 import ImageLogo from "../../components/imageLogo";
-========
-import ImageLogo from "../../Images/WareHouseLOGO.png";
->>>>>>>> Stashed changes:Vista/IndexPage/src/components/ContentComponents/Home.tsx
 import "./Home.css";
 import { Button } from "@mui/material";
 import LoginIcon from "@mui/icons-material/Login";
